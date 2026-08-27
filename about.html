@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About, Joswin Kumar, Visual &amp; Branding Designer</title>
+<meta name="description" content="Joswin Kumar, Visual & Branding Designer. Rooted in Hassan, Karnataka, shaped by problem-solving over decoration.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/about.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --neutral-950:#08080A; --neutral-900:#0F0F12; --neutral-800:#1A1A1F; --neutral-700:#2A2A30;
+    --neutral-600:#3A3A42; --neutral-500:#5A5A65; --neutral-400:#7A7A85; --neutral-300:#A0A0A8;
+    --neutral-200:#D0D0D5; --neutral-100:#E8E8EB; --neutral-50:#F5F5F7; --neutral-0:#FFFFFF;
+    --coral-900:#4A1515; --coral-800:#7A2020; --coral-700:#B03030; --coral-600:#D94444;
+    --coral-500:#FF5C5C; --coral-400:#FF7A7A; --coral-300:#FF9E9E; --coral-200:#FFC7C7;
+    --coral-100:#FFE5E5; --coral-50:#FFF2F2;
+    --bg:var(--neutral-950); --bg-elev:var(--neutral-800); --bg-card:var(--neutral-900); --ink:var(--neutral-0);
+    --ink-dim:var(--neutral-200); --ink-faint:var(--neutral-400);
+    --accent:var(--coral-500); --accent-hover:var(--coral-400); --accent-dim:var(--coral-900);
+    --line:var(--neutral-700); --radius:4px; --radius-full:999px;
+    --space-16:16px; --space-24:24px; --space-32:32px; --space-48:48px; --space-64:64px; --space-96:96px;
+    --ease:cubic-bezier(.16,.8,.24,1); --ease-in-out:cubic-bezier(.77,0,.175,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  ::selection{background:var(--accent);color:var(--bg);}
+  body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; font-weight:300; overflow-x:hidden;}
+  a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%; height:auto;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.1; text-wrap:balance;}
+  p{text-wrap:pretty;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 40px;}
+  @media (max-width:720px){ .wrap{padding:0 22px;} }
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(8,8,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  .header-inner{max-width:900px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  @media (max-width:720px){ .header-inner{padding:18px 22px;} }
+  .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
+  .back-link:hover{color:var(--accent);}
+  .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
+
+  .about-hero{padding:80px 0 56px; text-align:center;}
+  .about-hero .meta-labels{display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.1em; text-transform:uppercase; margin-bottom:40px;}
+  .about-hero h1{
+    font-family:'Lora',serif; font-weight:500; font-style:italic; letter-spacing:0;
+    font-size:clamp(32px,5.5vw,58px); line-height:1.25; max-width:760px; margin:0 auto;
+  }
+  .about-hero h1 .accent-dot{color:var(--accent); font-style:normal;}
+  .about-photo{margin:48px auto 0; max-width:280px;}
+  .about-photo img{border-radius:8px; border:1px solid var(--line);}
+
+  .about-section{padding:56px 0; border-top:1px solid var(--line);}
+  @media (max-width:720px){ .about-section{padding:40px 0;} }
+  .about-section h2{font-size:clamp(24px,3.5vw,34px); margin-bottom:24px;}
+  .about-section .lead{font-family:'Lora',serif; font-size:clamp(19px,2.4vw,24px); line-height:1.6; color:var(--ink); margin-bottom:20px; max-width:680px;}
+  .about-section p.body{font-size:16px; line-height:1.8; color:var(--ink-dim); max-width:680px; margin-bottom:18px;}
+  .about-section p.body b{color:var(--ink); font-weight:500;}
+
+  /* professional timeline */
+  .timeline{border-left:1px solid var(--line); padding-left:28px; display:flex; flex-direction:column; gap:28px; margin-top:32px;}
+  .timeline-item{position:relative;}
+  .timeline-item::before{content:'';position:absolute; left:-33px; top:6px; width:8px;height:8px;border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
+  .timeline-item.current::before{background:var(--accent);}
+  .timeline-item .role{font-family:'Space Grotesk',sans-serif; font-size:17px; color:var(--ink);}
+  .timeline-item .company{font-size:12px; color:var(--accent); margin-top:2px;}
+  .timeline-item .period{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); margin-top:6px; letter-spacing:.05em; text-transform:uppercase;}
+  .timeline-item .desc{font-size:13px; color:var(--ink-dim); margin-top:8px; line-height:1.6; max-width:440px;}
+
+  /* off the record */
+  .fact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:8px;}
+  @media (max-width:640px){ .fact-grid{grid-template-columns:1fr;} }
+  .fact-pill{
+    border:1px solid var(--line); border-radius:var(--radius-full); padding:16px 22px;
+    font-size:14px; color:var(--ink-dim); background:var(--bg-card); transition:border-color .2s ease, color .2s ease;
+  }
+  @media (hover:hover) and (pointer:fine){ .fact-pill:hover{border-color:var(--accent); color:var(--ink);} }
+
+  .about-closing{padding:72px 0; text-align:center; border-top:1px solid var(--line);}
+  .about-closing h2{font-size:clamp(26px,4vw,40px); margin-bottom:28px;}
+  .about-closing .cta-row{display:flex; justify-content:center; gap:18px; flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:var(--neutral-950);
+    padding:14px 24px; border-radius:var(--radius-full); font-family:'IBM Plex Mono',monospace; font-size:12px;
+    letter-spacing:.05em; text-transform:uppercase; transition:background-color .2s ease, transform .15s ease;
+  }
+  .btn-primary:active{transform:scale(.96);}
+  @media (hover:hover) and (pointer:fine){ .btn-primary:hover{background:var(--accent-hover);} }
+  .btn-ghost{
+    display:inline-flex; align-items:center; gap:9px; border:1px solid var(--ink); color:var(--ink);
+    padding:14px 24px; border-radius:var(--radius-full); font-family:'IBM Plex Mono',monospace; font-size:12px;
+    letter-spacing:.05em; text-transform:uppercase; transition:background-color .2s ease, color .2s ease;
+  }
+  @media (hover:hover) and (pointer:fine){ .btn-ghost:hover{background:var(--ink); color:var(--bg);} }
+
+  footer.page-footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);}
+
+  /* origin story: wide two-column layout */
+  .wrap-wide{max-width:1180px; margin:0 auto; padding:0 40px;}
+  @media (max-width:720px){ .wrap-wide{padding:0 22px;} }
+  .origin-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:start; margin-top:32px;}
+  @media (max-width:860px){ .origin-grid{grid-template-columns:1fr;} }
+
+  .feature-list{display:flex; flex-direction:column; gap:0; border-left:1px solid var(--line); margin-top:8px;}
+  .feature-item{position:relative; padding:20px 0 20px 28px;}
+  .feature-item::before{content:'';position:absolute; left:-5px; top:26px; width:9px; height:9px; border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
+  .feature-item .f-title{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--ink); margin-bottom:6px;}
+  .feature-item .f-icon{font-size:16px;}
+  .feature-item .f-desc{font-size:13px; line-height:1.65; color:var(--ink-dim); max-width:400px;}
+
+  .origin-illustration{position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--line);}
+  .origin-illustration::before{
+    content:''; position:absolute; inset:-20%; z-index:0;
+    background:radial-gradient(ellipse at 50% 40%, var(--accent) 0%, transparent 60%); opacity:.15; filter:blur(40px);
+  }
+  .origin-illustration img{position:relative; z-index:1; width:100%; display:block;}
+
+  .origin-quote{
+    margin-top:48px; padding-left:24px; border-left:2px solid var(--accent);
+    font-family:'Lora',serif; font-size:clamp(18px,2.2vw,22px); line-height:1.6; color:var(--ink-dim); max-width:640px;
+  }
+  .origin-quote b{color:var(--ink); font-weight:600; font-style:normal;}
+
+  /* scroll reveal */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
+  .reveal.in{opacity:1; transform:none;}
+  .feature-item.reveal:nth-child(1){transition-delay:.05s;}
+  .feature-item.reveal:nth-child(2){transition-delay:.12s;}
+  .feature-item.reveal:nth-child(3){transition-delay:.19s;}
+  .feature-item.reveal:nth-child(4){transition-delay:.26s;}
+  .feature-item.reveal:nth-child(5){transition-delay:.33s;}
+
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="back-link" href="index.html">&larr; Back to portfolio</a>
+    <div class="logo">JK<span style="color:var(--accent)">.</span></div>
+  </div>
+</header>
+
+<!-- Opening hook -->
+<section class="about-hero">
+  <div class="wrap">
+    <div class="meta-labels"><span>Visual &amp; Branding Designer</span><span>2026</span></div>
+    <h1>Rooted in Hassan.<br>Drawn to solving things properly<span class="accent-dot">.</span></h1>
+    <div class="about-photo">
+      <img src="hero_portrait.png" alt="Joswin Kumar portrait">
+    </div>
+  </div>
+</section>
+
+<!-- Origin story -->
+<section class="about-section">
+  <div class="wrap-wide">
+    <div class="eyebrow">Where It Started</div>
+    <h2 style="margin-top:14px;">Hassan wasn't a design town. It was a precise one.</h2>
+    <p class="body">I grew up in Hassan, a district in Karnataka known for two very different things: the Hoysala temples at Belur and Halebidu, carved with a level of detail that still doesn't look real up close, and the coffee estates in its hills, where nothing about a good harvest can be rushed.</p>
+
+    <div class="origin-grid">
+      <div class="feature-list">
+        <div class="feature-item reveal">
+          <div class="f-title"><span class="f-icon">&#127963;</span> Hoysala Heritage</div>
+          <div class="f-desc">Home to timeless Hoysala marvels like Belur, Halebidu and Sravanabelagola.</div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="f-title"><span class="f-icon">&#129521;</span> Art &amp; Craft Tradition</div>
+          <div class="f-desc">A rich legacy of stone carving, sculpture and craftsmanship that inspires generations.</div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="f-title"><span class="f-icon">&#9749;</span> Land of Coffee</div>
+          <div class="f-desc">Rolling hills of Arabica and Robusta plantations that put Hassan on India's coffee map.</div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="f-title"><span class="f-icon">&#127801;</span> Culture &amp; Festivals</div>
+          <div class="f-desc">Celebrated for festivals, temples, and a culture rooted in simplicity and warmth.</div>
+        </div>
+        <div class="feature-item reveal">
+          <div class="f-title"><span class="f-icon">&#9968;&#65039;</span> Nature's Abode</div>
+          <div class="f-desc">Blessed with forests, hills and rivers, a landscape that nurtures creativity and calm.</div>
+        </div>
+      </div>
+      <div class="origin-illustration reveal">
+        <img src="hassan_illustration.jpg" alt="Illustration of Hoysala temple architecture and coffee plant, representing Hassan's heritage">
+      </div>
+    </div>
+
+    <div class="origin-quote">Growing up surrounded by art, stories carved in stone, and the aroma of coffee in the hills, <b>I was always drawn to art, form and design.</b></div>
+
+    <p class="body" style="margin-top:40px;">As a kid, I was always pulled toward art, not because I was especially gifted at it, but because I liked making things that didn't exist yet. Hassan wasn't a design town. But it respected precision and patience in equal measure, and that stayed with me longer than I realized.</p>
+  </div>
+</section>
+
+<!-- The pivot -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="eyebrow">The Pivot</div>
+    <h2 style="margin-top:14px;">I wanted to animate. I learned to solve.</h2>
+    <p class="body">The plan was never graphic design, it was animation. I wanted to build worlds that moved. But I was never a naturally gifted fine artist, my drawings from imagination were average at best. What I was actually good at was figuring out why something wasn't working, and fixing it.</p>
+    <p class="body">Graphic design turned out to be exactly that. Less about raw drawing talent, more about solving a problem until the solution looked inevitable. That's the part that stuck: not that I could draw the best, but that I could think a brief through properly.</p>
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="eyebrow">How I Actually Think About It</div>
+    <p class="lead" style="margin-top:14px;">Hassan taught me that nothing good gets forced.</p>
+    <p class="body">The coffee growing in its hills doesn't rush, the soil, the shade, the harvest timing all have to be solved for, one at a time, before you get a cup that works. Branding is the same kind of patience. Every choice is a small problem solved quietly, so the final thing feels inevitable instead of decorated.</p>
+  </div>
+</section>
+
+<!-- Professional summary + timeline -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="eyebrow">The R&eacute;sum&eacute; Version</div>
+    <h2 style="margin-top:14px;">7+ years of making that hold up in practice.</h2>
+    <p class="body">I'm a Visual &amp; Branding Designer based in Bengaluru, currently a Graphic Designer II at <b>GeekyAnts</b>, where I lead brand identity design across UI/UX and marketing touchpoints for international clients, translating complex briefs into logo suites, style guides and motion identity systems.</p>
+    <p class="body">Before that, I designed cross-company campaign work with <b>Microsoft</b> and <b>Logitech</b> at Avientek, and spent over three years at <b>BYJU'S</b> collaborating directly with <b>Disney</b> and <b>Osmo</b> on interactive game stages and printable educational products, while mentoring junior designers to a 30% lift in team output quality.</p>
+    <p class="body">My background spans print, digital and motion, working primarily in Figma and Adobe Creative Suite, always with a systems-level eye toward keeping a brand cohesive across every touchpoint.</p>
+
+    <div class="timeline">
+      <div class="timeline-item current">
+        <div class="role">Graphic Designer II</div>
+        <div class="company">GeekyAnts</div>
+        <div class="period">Jul 2026 - Present</div>
+        <div class="desc">Leading brand identity across UI/UX &amp; marketing touchpoints; managing international client engagements end-to-end.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="role">Marketing Graphic Designer</div>
+        <div class="company">Avientek FZE</div>
+        <div class="period">Jul 2023 - Dec 2024</div>
+        <div class="desc">End-to-end campaign creative; partner initiatives with Microsoft &amp; Logitech.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="role">Creative Associate</div>
+        <div class="company">Think &amp; Learn (BYJU'S)</div>
+        <div class="period">Oct 2019 - Mar 2023</div>
+        <div class="desc">Collaborated with Disney &amp; Osmo on educational products; mentored junior designers.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="role">Diploma, Graphic &amp; Web Design</div>
+        <div class="company">Image Creative Education</div>
+        <div class="period">2017 - 2019</div>
+        <div class="desc">C-TECH Higher GWD.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Off the record -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="eyebrow">Off The Record</div>
+    <h2 style="margin-top:14px;">A few things that don't fit on a resume.</h2>
+    <div class="fact-grid">
+      <div class="fact-pill">Built the physique he now coaches others toward</div>
+      <div class="fact-pill">Dresses sharp, no occasion needed</div>
+      <div class="fact-pill">Procrastinates, then solves it in his head first</div>
+      <div class="fact-pill">Always has dark chocolate within reach</div>
+      <div class="fact-pill">Prefers solo bike rides to think</div>
+      <div class="fact-pill">Ranked in a photography course, still calls himself a beginner</div>
+      <div class="fact-pill">Genuinely loves coaching others through their transformation</div>
+      <div class="fact-pill">Sees a system in everything, not just brands</div>
+    </div>
+  </div>
+</section>
+
+<!-- Closing CTA -->
+<section class="about-closing">
+  <div class="wrap">
+    <h2>Enough about me.<br>Here's the work.</h2>
+    <div class="cta-row">
+      <a href="index.html#work" class="btn-primary">See Case Studies &darr;</a>
+      <a href="index.html#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">&copy; 2026 Joswin Kumar</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+</script>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+</script>
+
+</body>
+</html>
