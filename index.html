@@ -177,10 +177,6 @@
     font-size:clamp(52px,10vw,132px);
     color:var(--ink);
   }
-  .hero h1 .accent-mark{
-    display:inline-block; width:.24em; height:.24em; background:var(--accent);
-    margin-left:.12em; border-radius:2px; vertical-align:.06em;
-  }
 
   .hero-sub{
     margin-top:28px; max-width:560px;
@@ -243,6 +239,10 @@
 
   /* ---------- section shell ---------- */
   section{position:relative; padding:var(--space-48) 0;}
+  .about-teaser{display:flex; justify-content:space-between; align-items:center; gap:24px; border:1px solid var(--line); border-radius:8px; padding:32px; transition:border-color .2s ease;}
+  @media (hover:hover) and (pointer:fine){ .about-teaser:hover{border-color:var(--accent);} }
+  .about-teaser-arrow{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--accent); white-space:nowrap;}
+  @media (max-width:640px){ .about-teaser{flex-direction:column; align-items:flex-start;} }
   @media (max-width:720px){ section{padding:var(--space-32) 0;} }
   .section-head{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--space-48); gap:var(--space-24); flex-wrap:wrap;}
   .section-head h2{font-size:clamp(34px,5vw,58px);}
@@ -592,7 +592,7 @@
   <div class="logo">JK<span style="color:var(--accent)">.</span></div>
   <nav class="nav-mobile-hide">
     <a href="#work">Work</a>
-    <a href="#about">About Me</a>
+    <a href="about.html">About Me</a>
     <a href="#skills">Skills</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
@@ -608,7 +608,7 @@
   <div class="hero-split">
   <div class="hero-content" style="order:1;">
     <div class="eyebrow" style="color:var(--ink-dim);"><span class="dot" aria-hidden="true"></span> JOSWIN KUMAR // VISUAL &amp; BRANDING DESIGNER // BENGALURU</div>
-    <h1 style="text-transform:uppercase; font-size:clamp(36px,5.8vw,80px);">Build brands<br>that hold.<span class="accent-mark"></span></h1>
+    <h1 style="text-transform:uppercase; font-size:clamp(36px,5.8vw,80px);">Build brands<br>that hold.</h1>
 
     <p class="hero-sub" style="margin-top:20px; max-width:480px;">I design identity systems that survive contact with real teams, real deadlines and real production, not just the pitch deck.</p>
 
@@ -745,48 +745,17 @@
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
+<!-- ============ ABOUT TEASER ============ -->
 <section id="about">
   <div class="wrap">
-    <div class="section-head reveal">
-      <h2>About Me</h2>
-      <p>7+ years of building brand systems and design solutions for global and independent brands.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p style="color:var(--ink); font-size:22px; font-family:'Space Grotesk',sans-serif; font-weight:500; line-height:1.35; margin-bottom:26px;">Every brand I've worked on, from six-week-old startups to Mercedes-Benz, needed the same thing underneath: a system that still holds together under real-world pressure.</p>
-        <p>I'm a <b>Visual &amp; Branding Designer</b> based in Bengaluru, currently a Graphic Designer II at <b>GeekyAnts</b>, where I lead brand identity design across UI/UX and marketing touchpoints for international clients, translating complex briefs into logo suites, style guides and motion identity systems.</p>
-        <p>Before that, I designed cross-company campaign work with <b>Microsoft</b> and <b>Logitech</b> at Avientek, and spent over three years at <b>BYJU'S</b> collaborating directly with <b>Disney</b> and <b>Osmo</b> on interactive game stages and printable educational products, while mentoring junior designers to a 30% lift in team output quality.</p>
-        <p>My background spans print, digital and motion, working primarily in Figma and Adobe Creative Suite, always with a systems-level eye toward keeping a brand cohesive across every touchpoint.</p>
-        <p style="color:var(--ink-faint); font-size:14px;">Outside of brand systems, I spend most of my free time in the gym.</p>
+    <a href="about.html" class="about-teaser reveal">
+      <div>
+        <div class="eyebrow">The Person Behind the Work</div>
+        <h2 style="margin-top:14px;">Rooted in Hassan.<br>Shaped by problem-solving.</h2>
+        <p style="color:var(--ink-dim); font-size:15px; max-width:480px; margin-top:14px;">Where I grew up, what pulled me toward design, and a few things that don't fit on a résumé.</p>
       </div>
-      <div class="timeline reveal">
-        <div class="timeline-item current">
-          <div class="role">Graphic Designer II</div>
-          <div class="company">GeekyAnts</div>
-          <div class="period">JUL 2026 - PRESENT</div>
-          <div class="desc">Leading brand identity across UI/UX &amp; marketing touchpoints; managing international client engagements end-to-end.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="role">Marketing Graphic Designer</div>
-          <div class="company">Avientek FZE</div>
-          <div class="period">JUL 2023 - DEC 2024</div>
-          <div class="desc">End-to-end campaign creative; partner initiatives with Microsoft &amp; Logitech.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="role">Creative Associate</div>
-          <div class="company">Think &amp; Learn (BYJU'S)</div>
-          <div class="period">OCT 2019 - MAR 2023</div>
-          <div class="desc">Collaborated with Disney &amp; Osmo on educational products; mentored junior designers.</div>
-        </div>
-        <div class="timeline-item">
-          <div class="role">Diploma, Graphic &amp; Web Design</div>
-          <div class="company">Image Creative Education</div>
-          <div class="period">2017 - 2019</div>
-          <div class="desc">C-TECH Higher GWD.</div>
-        </div>
-      </div>
-    </div>
+      <div class="about-teaser-arrow">Know Me &rarr;</div>
+    </a>
   </div>
 </section>
 
