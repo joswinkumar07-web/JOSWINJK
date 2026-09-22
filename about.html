@@ -3,309 +3,687 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About, Joswin Kumar, Visual &amp; Branding Designer</title>
-<meta name="description" content="Joswin Kumar, Visual & Branding Designer. Rooted in Hassan, Karnataka, shaped by problem-solving over decoration.">
+<title>About — Joswin Kumar | Visual &amp; Branding Designer</title>
+<meta name="description" content="Joswin Kumar is a Visual &amp; Branding Designer in Bengaluru with 7+ years across brand identity, digital experiences and visual systems. Rooted in Hassan, drawn to detail.">
+<meta name="theme-color" content="#F7F5F0">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/about.html">
 
+<meta property="og:type" content="profile">
+<meta property="og:title" content="About — Joswin Kumar | Visual &amp; Branding Designer">
+<meta property="og:description" content="7+ years across brand identity, digital experiences and visual systems. Rooted in Hassan, drawn to detail.">
+<meta property="og:url" content="https://portfolio-joswin-jk.vercel.app/about.html">
+<meta property="og:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Joswin Kumar | Visual &amp; Branding Designer">
+<meta name="twitter:description" content="7+ years across brand identity, digital experiences and visual systems. Rooted in Hassan, drawn to detail.">
+<meta name="twitter:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Inter:wght@300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero_portrait.png">
+
+<script>document.documentElement.classList.add('js');</script>
 
 <style>
+  /* ==========================================================
+     TOKENS
+     ========================================================== */
   :root{
-    --neutral-950:#08080A; --neutral-900:#0F0F12; --neutral-800:#1A1A1F; --neutral-700:#2A2A30;
-    --neutral-600:#3A3A42; --neutral-500:#5A5A65; --neutral-400:#7A7A85; --neutral-300:#A0A0A8;
-    --neutral-200:#D0D0D5; --neutral-100:#E8E8EB; --neutral-50:#F5F5F7; --neutral-0:#FFFFFF;
-    --coral-900:#4A1515; --coral-800:#7A2020; --coral-700:#B03030; --coral-600:#D94444;
-    --coral-500:#FF5C5C; --coral-400:#FF7A7A; --coral-300:#FF9E9E; --coral-200:#FFC7C7;
-    --coral-100:#FFE5E5; --coral-50:#FFF2F2;
-    --bg:var(--neutral-950); --bg-elev:var(--neutral-800); --bg-card:var(--neutral-900); --ink:var(--neutral-0);
-    --ink-dim:var(--neutral-200); --ink-faint:var(--neutral-400);
-    --accent:var(--coral-500); --accent-hover:var(--coral-400); --accent-dim:var(--coral-900);
-    --line:var(--neutral-700); --radius:4px; --radius-full:999px;
-    --space-16:16px; --space-24:24px; --space-32:32px; --space-48:48px; --space-64:64px; --space-96:96px;
-    --ease:cubic-bezier(.16,.8,.24,1); --ease-in-out:cubic-bezier(.77,0,.175,1);
+    --bg:#F7F5F0;
+    --bg-deep:#EFEBE2;
+    --ink:#111111;
+    --ink-2:#3F3B35;          /* body copy */
+    --ink-3:#6B655B;          /* meta / micro labels (5.2:1 on --bg) */
+    --line:rgba(17,17,17,.20);
+    --line-soft:rgba(17,17,17,.11);
+    --accent:#B5352A;         /* muted red (5.4:1 on --bg) */
+
+    --serif:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+    --pad:clamp(22px,4.4vw,72px);
+    --sec:clamp(84px,11vw,168px);
+    --ease:cubic-bezier(.16,.8,.24,1);
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  ::selection{background:var(--accent);color:var(--bg);}
-  body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; font-weight:300; overflow-x:hidden;}
-  a{color:inherit; text-decoration:none;}
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; scroll-padding-top:72px;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.65; font-weight:400;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:clip;
+  }
+  h1,h2,h3,p,ol,ul,figure,blockquote{margin:0;}
+  ol,ul{padding:0; list-style:none;}
   img{display:block; max-width:100%; height:auto;}
-  h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.1; text-wrap:balance;}
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--accent); color:var(--bg);}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; text-wrap:balance;}
   p{text-wrap:pretty;}
-  .wrap{max-width:900px; margin:0 auto; padding:0 40px;}
-  @media (max-width:720px){ .wrap{padding:0 22px;} }
-  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
 
-  header{position:sticky; top:0; z-index:50; background:rgba(8,8,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  .header-inner{max-width:900px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
-  @media (max-width:720px){ .header-inner{padding:18px 22px;} }
-  .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
-  .back-link:hover{color:var(--accent);}
-  .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:4px; border-radius:2px;}
 
-  .about-hero{padding:80px 0 56px; text-align:center;}
-  .about-hero .meta-labels{display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.1em; text-transform:uppercase; margin-bottom:40px;}
-  .about-hero h1{
-    font-family:'Lora',serif; font-weight:500; font-style:italic; letter-spacing:0;
-    font-size:clamp(32px,5.5vw,58px); line-height:1.25; max-width:760px; margin:0 auto;
+  .sr-only{position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+  .skip{position:absolute; left:16px; top:-60px; z-index:100; background:var(--ink); color:var(--bg); padding:10px 16px; font:500 12px var(--mono); letter-spacing:.08em; text-transform:uppercase;}
+  .skip:focus{top:12px;}
+
+  /* animated underline used on links */
+  .ul{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat; padding-bottom:3px; transition:background-size .4s var(--ease);}
+  .ul:hover,.ul:focus-visible{background-size:100% 1px;}
+
+  /* ==========================================================
+     LAYOUT PRIMITIVES
+     ========================================================== */
+  .sec{position:relative; padding-bottom:var(--sec);}
+  .sec::before{ /* hairline that opens each section */
+    content:""; display:block; height:1px; background:var(--line);
+    width:min(100% - 2*var(--pad), var(--w)); margin:0 auto var(--sec);
   }
-  .about-hero h1 .accent-dot{color:var(--accent); font-style:normal;}
-  .about-photo{margin:48px auto 0; max-width:280px;}
-  .about-photo img{border-radius:8px; border:1px solid var(--line);}
+  .wrap{width:100%; max-width:calc(var(--w) + 2*var(--pad)); margin-inline:auto; padding-inline:var(--pad);}
+  .w-1400{--w:1400px;} .w-1280{--w:1280px;} .w-1200{--w:1200px;} .w-1100{--w:1100px;}
 
-  .about-section{padding:56px 0; border-top:1px solid var(--line);}
-  @media (max-width:720px){ .about-section{padding:40px 0;} }
-  .about-section h2{font-size:clamp(24px,3.5vw,34px); margin-bottom:24px;}
-  .about-section .lead{font-family:'Lora',serif; font-size:clamp(19px,2.4vw,24px); line-height:1.6; color:var(--ink); margin-bottom:20px; max-width:680px;}
-  .about-section p.body{font-size:16px; line-height:1.8; color:var(--ink-dim); max-width:680px; margin-bottom:18px;}
-  .about-section p.body b{color:var(--ink); font-weight:500;}
-
-  /* professional timeline */
-  .timeline{border-left:1px solid var(--line); padding-left:28px; display:flex; flex-direction:column; gap:28px; margin-top:32px;}
-  .timeline-item{position:relative;}
-  .timeline-item::before{content:'';position:absolute; left:-33px; top:6px; width:8px;height:8px;border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
-  .timeline-item.current::before{background:var(--accent);}
-  .timeline-item .role{font-family:'Space Grotesk',sans-serif; font-size:17px; color:var(--ink);}
-  .timeline-item .company{font-size:12px; color:var(--accent); margin-top:2px;}
-  .timeline-item .period{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); margin-top:6px; letter-spacing:.05em; text-transform:uppercase;}
-  .timeline-item .desc{font-size:13px; color:var(--ink-dim); margin-top:8px; line-height:1.6; max-width:440px;}
-
-  /* off the record */
-  .fact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:8px;}
-  @media (max-width:640px){ .fact-grid{grid-template-columns:1fr;} }
-  .fact-pill{
-    border:1px solid var(--line); border-radius:var(--radius-full); padding:16px 22px;
-    font-size:14px; color:var(--ink-dim); background:var(--bg-card); transition:border-color .2s ease, color .2s ease;
+  .eyebrow{
+    display:flex; align-items:center; gap:12px; margin-bottom:clamp(22px,3vw,40px);
+    font:500 11px/1 var(--mono); letter-spacing:.18em; text-transform:uppercase; color:var(--ink-2);
   }
-  @media (hover:hover) and (pointer:fine){ .fact-pill:hover{border-color:var(--accent); color:var(--ink);} }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent); flex:none;}
+  .eyebrow::after{content:""; width:clamp(36px,7vw,110px); height:1px; background:var(--line);}
+  .micro{font:500 11px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);}
+  .dot{color:var(--accent); font-style:normal;}
 
-  .about-closing{padding:72px 0; text-align:center; border-top:1px solid var(--line);}
-  .about-closing h2{font-size:clamp(26px,4vw,40px); margin-bottom:28px;}
-  .about-closing .cta-row{display:flex; justify-content:center; gap:18px; flex-wrap:wrap;}
-  .btn-primary{
-    display:inline-flex; align-items:center; gap:9px; background:var(--accent); color:var(--neutral-950);
-    padding:14px 24px; border-radius:var(--radius-full); font-family:'IBM Plex Mono',monospace; font-size:12px;
-    letter-spacing:.05em; text-transform:uppercase; transition:background-color .2s ease, transform .15s ease;
+  /* ==========================================================
+     HEADER
+     ========================================================== */
+  .site-header{
+    position:sticky; top:0; z-index:60; background:var(--bg);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px var(--pad); border-bottom:1px solid transparent; transition:border-color .3s ease;
   }
-  .btn-primary:active{transform:scale(.96);}
-  @media (hover:hover) and (pointer:fine){ .btn-primary:hover{background:var(--accent-hover);} }
-  .btn-ghost{
-    display:inline-flex; align-items:center; gap:9px; border:1px solid var(--ink); color:var(--ink);
-    padding:14px 24px; border-radius:var(--radius-full); font-family:'IBM Plex Mono',monospace; font-size:12px;
-    letter-spacing:.05em; text-transform:uppercase; transition:background-color .2s ease, color .2s ease;
+  .site-header.is-scrolled{border-bottom-color:var(--line-soft);}
+  .logo{font:600 26px/1 var(--serif); letter-spacing:-.01em;}
+  .logo span{color:var(--accent);}
+  .nav{display:flex; gap:clamp(20px,3.2vw,44px);}
+  .nav a{position:relative; font:400 13px/1 var(--sans); letter-spacing:.02em; color:var(--ink-2); padding:8px 0 10px; transition:color .2s ease;}
+  .nav a:hover{color:var(--ink);}
+  .nav a::before{ /* hover underline */
+    content:""; position:absolute; left:0; right:0; bottom:2px; height:1px; background:currentColor;
+    transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease);
   }
-  @media (hover:hover) and (pointer:fine){ .btn-ghost:hover{background:var(--ink); color:var(--bg);} }
-
-  footer.page-footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);}
-
-  /* origin story: wide two-column layout */
-  .wrap-wide{max-width:1180px; margin:0 auto; padding:0 40px;}
-  @media (max-width:720px){ .wrap-wide{padding:0 22px;} }
-  .origin-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:start; margin-top:32px;}
-  @media (max-width:860px){ .origin-grid{grid-template-columns:1fr;} }
-
-  .feature-list{display:flex; flex-direction:column; gap:0; border-left:1px solid var(--line); margin-top:8px;}
-  .feature-item{position:relative; padding:20px 0 20px 28px;}
-  .feature-item::before{content:'';position:absolute; left:-5px; top:26px; width:9px; height:9px; border-radius:50%; background:var(--bg); border:1px solid var(--accent);}
-  .feature-item .f-title{display:flex; align-items:center; gap:10px; font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--ink); margin-bottom:6px;}
-  .feature-item .f-icon{font-size:16px;}
-  .feature-item .f-desc{font-size:13px; line-height:1.65; color:var(--ink-dim); max-width:400px;}
-
-  .origin-illustration{position:relative; border-radius:8px; overflow:hidden; border:1px solid var(--line);}
-  .origin-illustration::before{
-    content:''; position:absolute; inset:-20%; z-index:0;
-    background:radial-gradient(ellipse at 50% 40%, var(--accent) 0%, transparent 60%); opacity:.15; filter:blur(40px);
+  .nav a:hover::before,.nav a:focus-visible::before{transform:scaleX(1);}
+  .nav a[aria-current="page"]{color:var(--ink); font-weight:500;}
+  .nav a[aria-current="page"]::before{transform:scaleX(1);}
+  .nav a[aria-current="page"]::after{ /* selected-state red dot */
+    content:""; position:absolute; left:50%; bottom:-4px; width:5px; height:5px; margin-left:-2.5px; border-radius:50%; background:var(--accent);
   }
-  .origin-illustration img{position:relative; z-index:1; width:100%; display:block;}
 
-  .origin-quote{
-    margin-top:48px; padding-left:24px; border-left:2px solid var(--accent);
-    font-family:'Lora',serif; font-size:clamp(18px,2.2vw,22px); line-height:1.6; color:var(--ink-dim); max-width:640px;
+  /* ==========================================================
+     01 — HERO
+     ========================================================== */
+  .hero{position:relative; overflow:hidden; padding-top:clamp(8px,2vw,28px);}
+  .hero-stage{
+    --fs:clamp(80px,14vw,226px);
+    --px:4.06em;                     /* portrait centre-line, measured from the stage's left edge */
+    position:relative; font-size:var(--fs); width:6.1em; height:3.5em; margin-inline:auto; line-height:1;
   }
-  .origin-quote b{color:var(--ink); font-weight:600; font-style:normal;}
+  .hero-title{font-weight:800; font-size:1em; line-height:.8; letter-spacing:-.025em; text-transform:uppercase; margin:0; color:var(--ink);}
+  .hero-title .w{position:absolute; top:.64em; white-space:nowrap; z-index:1; display:block;}
+  .hero-title .w1{right:calc(100% - var(--px) + .44em);}
+  .hero-title .w2{left:calc(var(--px) + .44em);}
+  .hero-portrait{
+    position:absolute; z-index:2; bottom:0; left:var(--px); height:3.5em; width:auto; max-width:none;
+    transform:translateX(-50%); user-select:none; -webkit-user-drag:none;
+  }
+  .hero-id{position:absolute; z-index:3; left:0; bottom:clamp(20px,2.6vw,40px); width:2.35em; min-width:250px; max-width:440px; font-size:16px;}
+  .hero-name{font:600 clamp(22px,2.1vw,32px)/1.05 var(--serif); letter-spacing:.07em; text-transform:uppercase; display:flex; align-items:center; gap:14px;}
+  .hero-name::before{content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none;}
+  .hero-role{font:500 clamp(19px,1.75vw,25px)/1.25 var(--sans); letter-spacing:-.01em; margin-top:14px; color:var(--ink);}
+  .hero-meta{margin-top:16px; padding-top:14px; border-top:1px solid var(--line);}
+  .scroll-cue{
+    position:absolute; z-index:3; right:0; bottom:clamp(20px,2.6vw,40px); font-size:11px;
+    writing-mode:vertical-rl; display:flex; align-items:center; gap:12px; color:var(--ink-2);
+  }
+  .scroll-cue .arrow{display:inline-block; writing-mode:horizontal-tb; transition:transform .3s var(--ease);}
+  .scroll-cue:hover .arrow{transform:translateY(4px);}
+  .hero-rule{height:1px; background:var(--line);}
 
-  /* scroll reveal */
-  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
-  .reveal.in{opacity:1; transform:none;}
-  .feature-item.reveal:nth-child(1){transition-delay:.05s;}
-  .feature-item.reveal:nth-child(2){transition-delay:.12s;}
-  .feature-item.reveal:nth-child(3){transition-delay:.19s;}
-  .feature-item.reveal:nth-child(4){transition-delay:.26s;}
-  .feature-item.reveal:nth-child(5){transition-delay:.33s;}
+  @media (prefers-reduced-motion:no-preference){
+    .hero-title .w1{animation:slide-r 1.1s var(--ease) both .05s;}
+    .hero-title .w2{animation:slide-l 1.1s var(--ease) both .05s;}
+    .hero-portrait{animation:rise 1.2s var(--ease) both .2s;}
+    .hero-id,.scroll-cue{animation:fade 1s ease both .7s;}
+    @keyframes slide-r{from{opacity:0; transform:translateX(-28px);} to{opacity:1; transform:none;}}
+    @keyframes slide-l{from{opacity:0; transform:translateX(28px);} to{opacity:1; transform:none;}}
+    @keyframes rise{from{opacity:0; transform:translate(-50%,36px);} to{opacity:1; transform:translate(-50%,0);}}
+    @keyframes fade{from{opacity:0;} to{opacity:1;}}
+  }
 
-  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1; transform:none; transition:none;} }
+  /* stacked hero: tablets + phones */
+  @media (max-width:899px){
+    .hero{padding-top:6px;}
+    .hero-stage{
+      --fs:clamp(64px,22vw,190px);
+      width:auto; height:auto; margin:0; padding-inline:var(--pad); font-size:var(--fs);
+    }
+    .hero-title .w{position:absolute; top:.06em;}
+    .hero-title .w1{left:var(--pad); right:auto;}
+    .hero-title .w2{left:var(--pad); top:.98em;}
+    .hero-stage::before{content:""; display:block; height:.78em;}   /* room for “About” above the head */
+    .hero-portrait{
+      position:relative; left:auto; bottom:auto; transform:none; height:auto;
+      width:min(80vw,540px); margin-left:auto; margin-right:calc(var(--pad) * -.2);
+    }
+    @keyframes rise{from{opacity:0; transform:translateY(36px);} to{opacity:1; transform:none;}}
+    .hero-id{position:static; width:auto; min-width:0; max-width:none; margin:0 calc(var(--pad) * -1); padding:22px var(--pad) 26px; border-top:1px solid var(--line);}
+    .hero-meta{border-top:0; padding-top:0; margin-top:12px;}
+    .scroll-cue{position:static; writing-mode:horizontal-tb; margin-top:18px;}
+    .hero-id-cue{display:flex; justify-content:space-between; align-items:flex-end; gap:16px;}
+  }
+  @media (min-width:900px){ .hero-id-cue{display:contents;} }
+
+  /* ==========================================================
+     02 — PROFESSIONAL SNAPSHOT
+     ========================================================== */
+  .snap-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,4fr); gap:clamp(32px,6vw,110px); align-items:end;}
+  .snap-h{font-size:clamp(44px,6.2vw,104px); line-height:.98; letter-spacing:-.03em; font-weight:400;}
+  .snap-h b{display:block; font-weight:800; letter-spacing:-.035em;}
+  .snap-copy{font-size:clamp(17px,1.35vw,20px); line-height:1.6; color:var(--ink-2); max-width:34ch; padding-bottom:.6em;}
+  .caps{display:grid; grid-template-columns:repeat(4,1fr); margin-top:clamp(44px,6vw,88px); border-top:1px solid var(--line);}
+  .caps li{padding:20px 24px 4px 0; display:flex; flex-direction:column; gap:10px; position:relative;}
+  .caps li + li{padding-left:24px; border-left:1px solid var(--line-soft);}
+  .caps .n{font:500 11px/1 var(--mono); letter-spacing:.14em; color:var(--accent);}
+  .caps .t{font:500 clamp(13px,1.15vw,15px)/1.3 var(--sans); letter-spacing:.11em; text-transform:uppercase; color:var(--ink);}
+  @media (max-width:899px){
+    .snap-grid{grid-template-columns:1fr; gap:28px;}
+    .snap-copy{max-width:46ch; padding-bottom:0;}
+    .caps{grid-template-columns:1fr 1fr;}
+    .caps li,.caps li + li{padding:18px 16px 18px 0; border-left:0;}
+    .caps li:nth-child(even){padding-left:18px; border-left:1px solid var(--line-soft);}
+    .caps li:nth-child(n+3){border-top:1px solid var(--line-soft);}
+  }
+
+  /* ==========================================================
+     03 — PLACE I BELONG / HASSAN
+     ========================================================== */
+  .hassan-top{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(24px,4vw,72px); align-items:start;}
+  .hassan-h{font-size:clamp(52px,6.9vw,116px); line-height:.94; letter-spacing:-.035em; font-weight:400;}
+  .hassan-h em{font-style:italic; font-weight:300;}
+  .hassan-sub{margin-top:clamp(26px,3vw,44px); font-size:clamp(17px,1.4vw,20px); line-height:1.65; color:var(--ink-2); max-width:36ch;}
+  .hassan-map{margin-top:clamp(-56px,-3vw,0px);}
+  .hassan-map img{width:100%; max-width:760px; margin-left:auto;}
+
+  .heritage{display:grid; grid-template-columns:repeat(5,1fr); margin-top:clamp(52px,7vw,104px); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .heritage li{position:relative; padding:34px 22px 30px 0; display:flex; flex-direction:column; gap:14px;}
+  .heritage li + li{padding-left:22px; border-left:1px solid var(--line-soft);}
+  .heritage li::before{content:""; position:absolute; top:-4px; left:0; width:7px; height:7px; border-radius:50%; background:var(--accent);}
+  .heritage li + li::before{left:-1px;}
+  .heritage img{height:58px; width:auto; max-width:100%; object-fit:contain; object-position:left center; margin-bottom:6px;}
+  .heritage .n{font:500 11px/1 var(--mono); letter-spacing:.14em; color:var(--ink-3);}
+  .heritage h3{font:500 12px/1.35 var(--sans); letter-spacing:.14em; text-transform:uppercase; color:var(--ink);}
+  .heritage p{font:italic 400 clamp(17px,1.4vw,20px)/1.3 var(--serif); color:var(--ink-2); max-width:16ch;}
+
+  .hassan-bottom{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:clamp(28px,6vw,120px); align-items:center; margin-top:clamp(56px,8vw,120px);}
+  .hassan-illus img{width:100%; max-width:560px;}
+  .hassan-quote{font:400 clamp(28px,3.5vw,54px)/1.16 var(--serif); letter-spacing:-.018em; color:var(--ink);}
+  .hassan-quote strong{
+    font-weight:500; font-style:italic;
+    background:linear-gradient(var(--accent),var(--accent)) 0 96%/100% 2px no-repeat; padding-bottom:.06em;
+  }
+  .hassan-bridge{margin-top:clamp(28px,3vw,44px); padding-top:24px; border-top:1px solid var(--line); max-width:46ch; font-size:clamp(16px,1.25vw,18px); color:var(--ink-2);}
+  .hassan-link{display:inline-block; margin-top:22px; font:500 11px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink);}
+
+  @media (max-width:899px){
+    .hassan-top{grid-template-columns:1fr; gap:8px;}
+    .hassan-map{margin-top:12px; margin-inline:calc(var(--pad) * -.4);}
+    .hassan-map img{margin:0 auto;}
+    .heritage{grid-template-columns:1fr; border-top:0; border-bottom:0; border-left:1px solid var(--line); margin-top:52px; margin-left:4px;}
+    .heritage li,.heritage li + li{
+      display:grid; grid-template-columns:72px 1fr; column-gap:18px; row-gap:4px; align-items:center;
+      padding:20px 0 20px 26px; border-left:0; border-top:0;
+    }
+    .heritage li::before,.heritage li + li::before{top:50%; left:-4px; margin-top:-3.5px;}
+    .heritage img{grid-row:1 / span 3; height:auto; max-height:56px; width:auto; max-width:72px; margin:0; object-position:center;}
+    .heritage .n{display:none;}
+    .heritage p{max-width:none;}
+    .hassan-bottom{grid-template-columns:1fr; gap:36px;}
+    .hassan-illus{order:2;}
+    .hassan-illus img{max-width:440px; margin:0 auto;}
+  }
+
+  /* ==========================================================
+     04 — THE PIVOT
+     ========================================================== */
+  .pivot-grid{position:relative;}
+  .pivot-grid::before{ /* asymmetric vertical rule: starts below the eyebrow, runs past the copy */
+    content:""; position:absolute; left:58.333%; top:.5em; bottom:-36px; width:1px; background:var(--line);
+  }
+  .pivot-row{display:grid; grid-template-columns:7fr 5fr;}
+  .pivot-h{display:grid; grid-template-columns:7fr 5fr; font-size:clamp(46px,6vw,98px); line-height:.98; letter-spacing:-.032em; font-weight:400;}
+  .pivot-h .a{padding-right:clamp(24px,4.5vw,72px); font-style:italic; font-weight:300; color:var(--ink);}
+  .pivot-h .b{padding-left:clamp(24px,4.5vw,72px); margin-top:1.05em; font-weight:800; letter-spacing:-.035em;}
+  .pivot-row .l{padding-right:clamp(24px,4.5vw,72px); margin-top:clamp(28px,3vw,44px);}
+  .pivot-row .r{padding-left:clamp(24px,4.5vw,72px); margin-top:clamp(28px,3vw,44px); display:flex; flex-direction:column; gap:1.1em;}
+  .pivot-copy{font:400 clamp(20px,1.9vw,27px)/1.45 var(--serif); color:var(--ink-2); max-width:24em;}
+  .pivot-copy.strong{color:var(--ink); font-weight:500;}
+  @media (max-width:899px){
+    .pivot-grid::before{left:0; top:.4em; bottom:0;}
+    .pivot-row,.pivot-h{grid-template-columns:1fr;}
+    .pivot-grid{padding-left:22px;}
+    .pivot-h .a,.pivot-h .b{padding:0;}
+    .pivot-h .b{margin-top:.15em;}
+    .pivot-row .l,.pivot-row .r{padding:0;}
+    .pivot-row .r{margin-top:1.1em;}
+    .pivot-row .l{margin-top:26px;}
+  }
+
+  /* ==========================================================
+     05 — HOW I THINK
+     ========================================================== */
+  .think-h{font-size:clamp(46px,7.2vw,118px); line-height:.98; letter-spacing:-.035em; font-weight:400; max-width:12.5em;}
+  .think-h em{font-style:italic; font-weight:300;}
+  .think-body{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:clamp(28px,7vw,140px); margin-top:clamp(44px,6vw,92px);}
+  .think-lead{font:400 clamp(24px,2.5vw,36px)/1.22 var(--serif); letter-spacing:-.015em; max-width:16em;}
+  .think-lines{display:flex; flex-direction:column;}
+  .think-lines span{display:block; padding:14px 0; border-top:1px solid var(--line-soft); font-size:clamp(17px,1.4vw,20px); color:var(--ink-2);}
+  .think-lines span:first-child{border-top:1px solid var(--line);}
+  .think-close{margin-top:clamp(26px,3vw,40px); font:italic 400 clamp(22px,2.2vw,31px)/1.3 var(--serif); color:var(--ink); max-width:24em;}
+  .process{display:flex; flex-wrap:wrap; gap:6px 0; margin-top:clamp(48px,6vw,88px); padding-top:20px; border-top:1px solid var(--line); font:500 12px/1 var(--mono); letter-spacing:.2em; text-transform:uppercase; color:var(--ink-2);}
+  .process li{display:flex; align-items:center;}
+  .process li + li::before{content:"/"; margin:0 clamp(12px,2.2vw,30px); color:var(--accent); font-weight:400;}
+  @media (max-width:899px){
+    .think-body{grid-template-columns:1fr; gap:34px;}
+    .process{font-size:11px; letter-spacing:.14em; row-gap:14px;}
+  }
+
+  /* ==========================================================
+     06 — EXPERIENCE
+     ========================================================== */
+  .exp-h{font-size:clamp(38px,5vw,84px); line-height:1.02; letter-spacing:-.03em; font-weight:400; max-width:15em;}
+  .timeline{display:grid; grid-template-columns:repeat(4,1fr); gap:0 clamp(22px,3vw,48px); margin-top:clamp(52px,7vw,104px);}
+  .timeline li{position:relative; padding-top:30px; display:flex; flex-direction:column; gap:6px;}
+  .timeline li::before{ /* rule */
+    content:""; position:absolute; left:0; right:calc(clamp(22px,3vw,48px) * -1); top:0; height:1px; background:var(--line);
+  }
+  .timeline li:last-child::before{right:0;}
+  .timeline li::after{ /* marker */
+    content:""; position:absolute; left:0; top:-4px; width:9px; height:9px; border-radius:50%; background:var(--accent);
+  }
+  .timeline .period{font:500 11px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); order:-1; margin-bottom:8px;}
+  .timeline h3{font:500 clamp(26px,2.4vw,36px)/1.08 var(--serif); letter-spacing:-.015em;}
+  .timeline .role{font:500 15px/1.4 var(--sans); color:var(--ink);}
+  .timeline .desc{margin-top:10px; font-size:15px; line-height:1.6; color:var(--ink-2); max-width:30ch;}
+  .exp-note{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(24px,5vw,90px); margin-top:clamp(52px,6vw,88px);}
+  .exp-note p{font-size:clamp(16px,1.25vw,18px); color:var(--ink-2); max-width:52ch;}
+  .exp-clients{align-self:end; display:flex; flex-wrap:wrap; gap:8px 0;}
+  .exp-clients li + li::before{content:"·"; margin:0 12px; color:var(--accent);}
+  .exp-clients-label{display:block; margin-bottom:12px;}
+
+  .js .timeline li::before{transform:scaleX(0); transform-origin:left; transition:transform 1.1s var(--ease);}
+  .js .timeline li::after{transform:scale(0); transition:transform .5s var(--ease) .25s;}
+  .js .timeline li.in::before{transform:none;}
+  .js .timeline li.in::after{transform:none;}
+
+  @media (max-width:899px){
+    .timeline{grid-template-columns:1fr; border-left:1px solid var(--line); margin-left:4px; gap:0;}
+    .timeline li,.timeline li:last-child{padding:0 0 42px 30px;}
+    .timeline li:last-child{padding-bottom:0;}
+    .timeline li::before{display:none;}
+    .timeline li::after{left:-5px; top:3px;}
+    .timeline .desc{max-width:none;}
+    .exp-note{grid-template-columns:1fr; gap:30px;}
+    .js .timeline li::after{transform:scale(0);}
+  }
+
+  /* ==========================================================
+     07 — WHAT I BRING
+     ========================================================== */
+  .bring-h{font-size:clamp(46px,7vw,112px); line-height:.96; letter-spacing:-.035em; font-weight:400;}
+  .bring-grid{display:grid; grid-template-columns:1fr 1fr; margin-top:clamp(44px,6vw,88px); border-top:1px solid var(--line);}
+  .bring-item{padding:clamp(28px,3.4vw,52px) clamp(20px,3vw,48px) clamp(34px,4vw,64px) 0; border-bottom:1px solid var(--line-soft);}
+  .bring-item:nth-child(even){padding-left:clamp(20px,3vw,48px); padding-right:0; border-left:1px solid var(--line);}
+  .bring-item:nth-child(n+3){border-bottom:0;}
+  .bring-item:nth-child(n+3){border-top:1px solid var(--line-soft);}
+  .bring-item .n{display:block; font:500 11px/1 var(--mono); letter-spacing:.16em; color:var(--ink-3); transition:color .25s ease;}
+  .bring-item h3{margin-top:clamp(28px,4vw,64px); font-size:clamp(36px,4.8vw,78px); line-height:1; letter-spacing:-.03em; font-weight:500;}
+  .bring-item h3 .dot{opacity:0; transition:opacity .3s ease;}
+  .bring-item p{margin-top:18px; max-width:26em; font-size:clamp(16px,1.3vw,19px); color:var(--ink-2);}
+  @media (hover:hover){
+    .bring-item:hover .n{color:var(--accent);}
+    .bring-item:hover h3 .dot{opacity:1;}
+  }
+  @media (max-width:899px){
+    .bring-grid{grid-template-columns:1fr;}
+    .bring-item,.bring-item:nth-child(even){padding:30px 0 34px; border-left:0; border-top:0; border-bottom:1px solid var(--line-soft);}
+    .bring-item:last-child{border-bottom:0;}
+    .bring-item h3{margin-top:24px;}
+    .bring-item h3 .dot{opacity:1;}
+  }
+
+  /* ==========================================================
+     08 — OFF THE RECORD
+     ========================================================== */
+  .off-grid{display:grid; grid-template-columns:minmax(0,4fr) minmax(0,6fr); gap:clamp(28px,7vw,120px); align-items:start;}
+  .off-h{font-size:clamp(32px,3.7vw,56px); line-height:1.08; letter-spacing:-.025em; font-weight:400; max-width:11em;}
+  .facts{counter-reset:f; border-top:1px solid var(--line);}
+  .facts li{counter-increment:f; display:grid; grid-template-columns:44px 1fr; gap:8px; align-items:baseline; padding:15px 0; border-bottom:1px solid var(--line-soft); font-size:clamp(16px,1.3vw,18px); color:var(--ink-2);}
+  .facts li::before{content:counter(f,decimal-leading-zero); font:500 11px/1 var(--mono); letter-spacing:.14em; color:var(--ink-3);}
+  @media (max-width:899px){
+    .off-grid{grid-template-columns:1fr; gap:30px;}
+    .off-h{max-width:14em;}
+  }
+
+  /* ==========================================================
+     09 — FINAL CTA
+     ========================================================== */
+  .cta-h{font-size:clamp(56px,10.5vw,176px); line-height:.9; letter-spacing:-.04em; font-weight:400;}
+  .cta-h > span{display:block;}
+  .cta-h .b{font-weight:800; letter-spacing:-.045em;}
+  .cta-row{display:flex; flex-wrap:wrap; align-items:center; gap:22px 44px; margin-top:clamp(40px,5vw,72px);}
+  .btn{
+    display:inline-flex; align-items:center; gap:14px; padding:20px 30px; background:var(--ink); color:var(--bg);
+    font:500 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; transition:background-color .3s ease;
+  }
+  .btn .arrow{transition:transform .3s var(--ease);}
+  .btn:hover{background:var(--accent);}
+  .btn:hover .arrow{transform:translateX(5px);}
+  .btn-text{font:500 12px/1 var(--mono); letter-spacing:.16em; text-transform:uppercase; color:var(--ink); padding-bottom:6px; border-bottom:1px solid var(--ink); display:inline-flex; gap:12px; transition:color .3s ease, border-color .3s ease;}
+  .btn-text .arrow{transition:transform .3s var(--ease);}
+  .btn-text:hover{color:var(--accent); border-color:var(--accent);}
+  .btn-text:hover .arrow{transform:translateX(5px);}
+  @media (max-width:520px){ .btn{width:100%; justify-content:space-between;} }
+
+  /* ==========================================================
+     FOOTER
+     ========================================================== */
+  .page-footer{padding:26px var(--pad) 34px; border-top:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .page-footer a:hover{color:var(--accent);}
+
+  /* ==========================================================
+     SCROLL REVEAL (JS only — content stays visible without it)
+     ========================================================== */
+  .js .reveal{opacity:0; transform:translateY(18px); transition:opacity .9s var(--ease), transform .9s var(--ease); transition-delay:calc(var(--d,0) * 90ms);}
+  .js .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .js .reveal,.js .reveal.in{opacity:1; transform:none; transition:none;}
+    .js .timeline li::before,.js .timeline li::after{transform:none; transition:none;}
+    .hero *{animation:none!important;}
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a class="back-link" href="index.html">&larr; Back to portfolio</a>
-    <div class="logo">JK<span style="color:var(--accent)">.</span></div>
-  </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <a class="logo" href="index.html" aria-label="Joswin Kumar, back to portfolio home">JK<span>.</span></a>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html#work">Work</a>
+    <a href="about.html" aria-current="page">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
 </header>
 
-<!-- Opening hook -->
-<section class="about-hero">
-  <div class="wrap">
-    <div class="meta-labels"><span>Visual &amp; Branding Designer</span><span>2026</span></div>
-    <h1>Rooted in Hassan.<br>Drawn to solving things properly<span class="accent-dot">.</span></h1>
-    <div class="about-photo">
-      <img src="hero_portrait.png" alt="Joswin Kumar portrait">
-    </div>
-  </div>
-</section>
+<main id="main">
 
-<!-- Origin story -->
-<section class="about-section">
-  <div class="wrap-wide">
-    <div class="eyebrow">Where It Started</div>
-    <h2 style="margin-top:14px;">Hassan wasn't a design town. It was a precise one.</h2>
-    <p class="body">I grew up in Hassan, a district in Karnataka known for two very different things: the Hoysala temples at Belur and Halebidu, carved with a level of detail that still doesn't look real up close, and the coffee estates in its hills, where nothing about a good harvest can be rushed.</p>
+  <!-- ======================= 01 — HERO ======================= -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-stage">
+      <h1 class="hero-title"><span class="w w1">About</span> <span class="w w2">Me</span></h1>
 
-    <div class="origin-grid">
-      <div class="feature-list">
-        <div class="feature-item reveal">
-          <div class="f-title"><span class="f-icon">&#127963;</span> Hoysala Heritage</div>
-          <div class="f-desc">Home to timeless Hoysala marvels like Belur, Halebidu and Sravanabelagola.</div>
+      <img class="hero-portrait" src="hero_portrait.png" width="807" height="952"
+           alt="Black-and-white portrait of Joswin Kumar, one hand resting at his chin" fetchpriority="high" decoding="async">
+
+      <div class="hero-id-cue">
+        <div class="hero-id">
+          <p class="hero-name">Joswin Kumar</p>
+          <p class="hero-role">Visual &amp; Branding Designer</p>
+          <p class="micro hero-meta">7+ years · Brand · Digital · Motion</p>
         </div>
-        <div class="feature-item reveal">
-          <div class="f-title"><span class="f-icon">&#129521;</span> Art &amp; Craft Tradition</div>
-          <div class="f-desc">A rich legacy of stone carving, sculpture and craftsmanship that inspires generations.</div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="f-title"><span class="f-icon">&#9749;</span> Land of Coffee</div>
-          <div class="f-desc">Rolling hills of Arabica and Robusta plantations that put Hassan on India's coffee map.</div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="f-title"><span class="f-icon">&#127801;</span> Culture &amp; Festivals</div>
-          <div class="f-desc">Celebrated for festivals, temples, and a culture rooted in simplicity and warmth.</div>
-        </div>
-        <div class="feature-item reveal">
-          <div class="f-title"><span class="f-icon">&#9968;&#65039;</span> Nature's Abode</div>
-          <div class="f-desc">Blessed with forests, hills and rivers, a landscape that nurtures creativity and calm.</div>
-        </div>
-      </div>
-      <div class="origin-illustration reveal">
-        <img src="hassan_illustration.jpg" alt="Illustration of Hoysala temple architecture and coffee plant, representing Hassan's heritage">
+        <a class="scroll-cue micro" href="#snapshot"><span>Scroll to explore</span> <span class="arrow" aria-hidden="true">↓</span></a>
       </div>
     </div>
+    <div class="hero-rule" aria-hidden="true"></div>
+  </section>
 
-    <div class="origin-quote">Growing up surrounded by art, stories carved in stone, and the aroma of coffee in the hills, <b>I was always drawn to art, form and design.</b></div>
-
-    <p class="body" style="margin-top:40px;">As a kid, I was always pulled toward art, not because I was especially gifted at it, but because I liked making things that didn't exist yet. Hassan wasn't a design town. But it respected precision and patience in equal measure, and that stayed with me longer than I realized.</p>
-  </div>
-</section>
-
-<!-- The pivot -->
-<section class="about-section">
-  <div class="wrap">
-    <div class="eyebrow">The Pivot</div>
-    <h2 style="margin-top:14px;">I wanted to animate. I learned to solve.</h2>
-    <p class="body">The plan was never graphic design, it was animation. I wanted to build worlds that moved. But I was never a naturally gifted fine artist, my drawings from imagination were average at best. What I was actually good at was figuring out why something wasn't working, and fixing it.</p>
-    <p class="body">Graphic design turned out to be exactly that. Less about raw drawing talent, more about solving a problem until the solution looked inevitable. That's the part that stuck: not that I could draw the best, but that I could think a brief through properly.</p>
-  </div>
-</section>
-
-<!-- Philosophy -->
-<section class="about-section">
-  <div class="wrap">
-    <div class="eyebrow">How I Actually Think About It</div>
-    <p class="lead" style="margin-top:14px;">Hassan taught me that nothing good gets forced.</p>
-    <p class="body">The coffee growing in its hills doesn't rush, the soil, the shade, the harvest timing all have to be solved for, one at a time, before you get a cup that works. Branding is the same kind of patience. Every choice is a small problem solved quietly, so the final thing feels inevitable instead of decorated.</p>
-  </div>
-</section>
-
-<!-- Professional summary + timeline -->
-<section class="about-section">
-  <div class="wrap">
-    <div class="eyebrow">The R&eacute;sum&eacute; Version</div>
-    <h2 style="margin-top:14px;">7+ years of making that hold up in practice.</h2>
-    <p class="body">I'm a Visual &amp; Branding Designer based in Bengaluru, currently a Graphic Designer II at <b>GeekyAnts</b>, where I lead brand identity design across UI/UX and marketing touchpoints for international clients, translating complex briefs into logo suites, style guides and motion identity systems.</p>
-    <p class="body">Before that, I designed cross-company campaign work with <b>Microsoft</b> and <b>Logitech</b> at Avientek, and spent over three years at <b>BYJU'S</b> collaborating directly with <b>Disney</b> and <b>Osmo</b> on interactive game stages and printable educational products, while mentoring junior designers to a 30% lift in team output quality.</p>
-    <p class="body">My background spans print, digital and motion, working primarily in Figma and Adobe Creative Suite, always with a systems-level eye toward keeping a brand cohesive across every touchpoint.</p>
-
-    <div class="timeline">
-      <div class="timeline-item current">
-        <div class="role">Graphic Designer II</div>
-        <div class="company">GeekyAnts</div>
-        <div class="period">Jul 2026 - Present</div>
-        <div class="desc">Leading brand identity across UI/UX &amp; marketing touchpoints; managing international client engagements end-to-end.</div>
+  <!-- ======================= 02 — PROFESSIONAL SNAPSHOT ======================= -->
+  <section class="sec w-1400" id="snapshot" aria-labelledby="snap-h" style="margin-top:var(--sec)">
+    <div class="wrap">
+      <p class="eyebrow reveal">Professional snapshot</p>
+      <div class="snap-grid">
+        <h2 class="snap-h reveal" id="snap-h"><b>7+ years</b>making brands hold up in practice<span class="dot">.</span></h2>
+        <p class="snap-copy reveal" style="--d:2">Visual &amp; Branding Designer based in Bengaluru, working across brand identity, digital experiences, UI/UX visual systems, campaigns and motion.</p>
       </div>
-      <div class="timeline-item">
-        <div class="role">Marketing Graphic Designer</div>
-        <div class="company">Avientek FZE</div>
-        <div class="period">Jul 2023 - Dec 2024</div>
-        <div class="desc">End-to-end campaign creative; partner initiatives with Microsoft &amp; Logitech.</div>
+      <ul class="caps" role="list" aria-label="Areas of work">
+        <li class="reveal" style="--d:0"><span class="n">01</span><span class="t">Brand identity</span></li>
+        <li class="reveal" style="--d:1"><span class="n">02</span><span class="t">Visual systems</span></li>
+        <li class="reveal" style="--d:2"><span class="n">03</span><span class="t">Digital experiences</span></li>
+        <li class="reveal" style="--d:3"><span class="n">04</span><span class="t">Motion &amp; campaigns</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ======================= 03 — PLACE I BELONG / HASSAN ======================= -->
+  <section class="sec w-1400" id="hassan" aria-labelledby="hassan-h">
+    <div class="wrap">
+      <div class="hassan-top">
+        <div class="hassan-copy">
+          <p class="eyebrow reveal">Place I belong</p>
+          <h2 class="hassan-h reveal" id="hassan-h">Rooted in Hassan<span class="dot">.</span><br>Drawn to <em>detail</em><span class="dot">.</span></h2>
+          <p class="hassan-sub reveal" style="--d:2">I grew up in Hassan, Karnataka, surrounded by Hoysala architecture, stone craftsmanship, coffee estates and a culture shaped by patience and detail.</p>
+        </div>
+        <figure class="hassan-map reveal" style="--d:2">
+          <img src="hassan_map.webp" width="674" height="668"
+               alt="Map of Hassan district, Karnataka, its boundary marked with a red dotted line, with Chikkamagaluru, Arasikere, Sakleshpur, Belur, Mangaluru and nearby towns labelled." loading="lazy" decoding="async">
+        </figure>
       </div>
-      <div class="timeline-item">
-        <div class="role">Creative Associate</div>
-        <div class="company">Think &amp; Learn (BYJU'S)</div>
-        <div class="period">Oct 2019 - Mar 2023</div>
-        <div class="desc">Collaborated with Disney &amp; Osmo on educational products; mentored junior designers.</div>
-      </div>
-      <div class="timeline-item">
-        <div class="role">Diploma, Graphic &amp; Web Design</div>
-        <div class="company">Image Creative Education</div>
-        <div class="period">2017 - 2019</div>
-        <div class="desc">C-TECH Higher GWD.</div>
+
+      <ol class="heritage" role="list" aria-label="What Hassan is known for">
+        <li class="reveal" style="--d:0"><img src="hassan_icon_temple.webp" alt="" width="122" height="110" loading="lazy"><span class="n">01</span><h3>Hoysala heritage</h3><p>Detail carved into stone.</p></li>
+        <li class="reveal" style="--d:1"><img src="hassan_icon_pillar.webp" alt="" width="76" height="100" loading="lazy"><span class="n">02</span><h3>Art &amp; craft</h3><p>Craftsmanship that rewards patience.</p></li>
+        <li class="reveal" style="--d:2"><img src="hassan_icon_coffee.webp" alt="" width="108" height="122" loading="lazy"><span class="n">03</span><h3>Land of coffee</h3><p>A landscape where nothing is rushed.</p></li>
+        <li class="reveal" style="--d:3"><img src="hassan_icon_lotus.webp" alt="" width="108" height="100" loading="lazy"><span class="n">04</span><h3>Culture &amp; festivals</h3><p>A sense of warmth and community.</p></li>
+        <li class="reveal" style="--d:4"><img src="hassan_icon_hills.webp" alt="" width="124" height="68" loading="lazy"><span class="n">05</span><h3>Nature</h3><p>Hills, forests and open space.</p></li>
+      </ol>
+
+      <div class="hassan-bottom">
+        <figure class="hassan-illus reveal">
+          <img src="hassan_illustration_ink.webp" width="900" height="1191"
+               alt="Line illustration of a Hoysala temple, a carved Nandi bull, a mandala and a coffee plant with ripe cherries and beans." loading="lazy" decoding="async">
+        </figure>
+        <div class="hassan-text">
+          <blockquote class="hassan-quote reveal">
+            <p>“Growing up surrounded by art, stories carved in stone, and the aroma of coffee in the hills, <strong>I was always drawn to art, form and design.</strong>”</p>
+          </blockquote>
+          <p class="hassan-bridge reveal" style="--d:1">Hassan wasn't a design town. But it respected precision and patience in equal measure, and that stayed with me longer than I realized.
+            <a class="hassan-link ul" href="#think">See how it shapes the work ↓</a>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Off the record -->
-<section class="about-section">
-  <div class="wrap">
-    <div class="eyebrow">Off The Record</div>
-    <h2 style="margin-top:14px;">A few things that don't fit on a resume.</h2>
-    <div class="fact-grid">
-      <div class="fact-pill">Built the physique he now coaches others toward</div>
-      <div class="fact-pill">Dresses sharp, no occasion needed</div>
-      <div class="fact-pill">Procrastinates, then solves it in his head first</div>
-      <div class="fact-pill">Always has dark chocolate within reach</div>
-      <div class="fact-pill">Prefers solo bike rides to think</div>
-      <div class="fact-pill">Ranked in a photography course, still calls himself a beginner</div>
-      <div class="fact-pill">Genuinely loves coaching others through their transformation</div>
-      <div class="fact-pill">Sees a system in everything, not just brands</div>
+  <!-- ======================= 04 — THE PIVOT ======================= -->
+  <section class="sec w-1200" id="pivot" aria-labelledby="pivot-h">
+    <div class="wrap">
+      <p class="eyebrow reveal">The pivot</p>
+      <div class="pivot-grid">
+        <h2 class="pivot-h" id="pivot-h">
+          <span class="a reveal">I wanted to animate.</span>
+          <span class="b reveal" style="--d:2">I learned to solve<span class="dot">.</span></span>
+        </h2>
+        <div class="pivot-row">
+          <div class="l reveal" style="--d:1">
+            <p class="pivot-copy">The plan was never graphic design. It was animation. I wanted to build worlds that moved.</p>
+          </div>
+          <div class="r reveal" style="--d:3">
+            <p class="pivot-copy">But along the way I discovered something I was naturally good at: figuring out why something wasn't working and fixing it.</p>
+            <p class="pivot-copy strong">Graphic design became the bridge between creativity and problem solving.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Closing CTA -->
-<section class="about-closing">
-  <div class="wrap">
-    <h2>Enough about me.<br>Here's the work.</h2>
-    <div class="cta-row">
-      <a href="index.html#work" class="btn-primary">See Case Studies &darr;</a>
-      <a href="index.html#contact" class="btn-ghost">Get In Touch</a>
+  <!-- ======================= 05 — HOW I THINK ======================= -->
+  <section class="sec w-1280" id="think" aria-labelledby="think-h">
+    <div class="wrap">
+      <p class="eyebrow reveal">How I think</p>
+      <h2 class="think-h reveal" id="think-h">The same patience that builds a temple, <em>shapes a brand</em><span class="dot">.</span></h2>
+      <div class="think-body">
+        <p class="think-lead reveal">Hassan taught me that nothing good gets forced.</p>
+        <div class="reveal" style="--d:2">
+          <p class="think-lines">
+            <span>Every detail has a reason.</span>
+            <span>Every choice should solve something.</span>
+            <span>Every system should work beyond the first screen.</span>
+          </p>
+          <p class="think-close">Branding is not decoration. It is a series of small decisions that eventually make something feel inevitable.</p>
+        </div>
+      </div>
+      <ol class="process" role="list" aria-label="How I work">
+        <li class="reveal" style="--d:0">Think</li>
+        <li class="reveal" style="--d:1">Observe</li>
+        <li class="reveal" style="--d:2">Structure</li>
+        <li class="reveal" style="--d:3">Craft</li>
+        <li class="reveal" style="--d:4">Refine</li>
+      </ol>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="page-footer">&copy; 2026 Joswin Kumar</footer>
+  <!-- ======================= 06 — EXPERIENCE ======================= -->
+  <section class="sec w-1400" id="experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <p class="eyebrow reveal">The résumé version</p>
+      <h2 class="exp-h reveal" id="exp-h">7+ years of design across brand, digital and motion<span class="dot">.</span></h2>
+
+      <ol class="timeline" role="list">
+        <li class="reveal">
+          <h3>GeekyAnts</h3>
+          <p class="role">Graphic Designer II</p>
+          <p class="period">Jul 2026 — Present</p>
+          <p class="desc">Leading brand identity across UI/UX and marketing touchpoints; managing international client engagements end-to-end.</p>
+        </li>
+        <li class="reveal" style="--d:1">
+          <h3>Avientek FZE</h3>
+          <p class="role">Marketing Graphic Designer</p>
+          <p class="period">Jul 2023 — Dec 2024</p>
+          <p class="desc">End-to-end campaign creative; partner initiatives with Microsoft &amp; Logitech.</p>
+        </li>
+        <li class="reveal" style="--d:2">
+          <h3>Think &amp; Learn / BYJU'S</h3>
+          <p class="role">Creative Associate</p>
+          <p class="period">Oct 2019 — Mar 2023</p>
+          <p class="desc">Collaborated with Disney &amp; Osmo on educational products; mentored junior designers.</p>
+        </li>
+        <li class="reveal" style="--d:3">
+          <h3>Image Creative Education</h3>
+          <p class="role">Diploma, Graphic &amp; Web Design</p>
+          <p class="period">2017 — 2019</p>
+          <p class="desc">C-TECH Higher GWD. The foundation for everything after.</p>
+        </li>
+      </ol>
+
+      <div class="exp-note">
+        <p class="reveal">Across print, digital and motion, working primarily in Figma and Adobe Creative Suite, always with a systems-level eye toward keeping a brand cohesive across every touchpoint.</p>
+        <div class="reveal" style="--d:2">
+          <span class="micro exp-clients-label">Worked with</span>
+          <ul class="exp-clients" role="list" style="font:400 clamp(20px,1.9vw,26px)/1.2 var(--serif)">
+            <li>Microsoft</li><li>Logitech</li><li>Disney</li><li>Osmo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 07 — WHAT I BRING ======================= -->
+  <section class="sec w-1280" id="bring" aria-labelledby="bring-h">
+    <div class="wrap">
+      <p class="eyebrow reveal">What I bring</p>
+      <h2 class="bring-h reveal" id="bring-h">Four things I do well<span class="dot">.</span></h2>
+      <div class="bring-grid">
+        <article class="bring-item reveal">
+          <span class="n">01</span>
+          <h3>Brand identity<span class="dot">.</span></h3>
+          <p>Building visual languages rather than isolated logos.</p>
+        </article>
+        <article class="bring-item reveal" style="--d:1">
+          <span class="n">02</span>
+          <h3>Visual systems<span class="dot">.</span></h3>
+          <p>Creating consistency across multiple touchpoints.</p>
+        </article>
+        <article class="bring-item reveal" style="--d:1">
+          <span class="n">03</span>
+          <h3>Digital<span class="dot">.</span></h3>
+          <p>Translating brand thinking into UI and digital experiences.</p>
+        </article>
+        <article class="bring-item reveal" style="--d:2">
+          <span class="n">04</span>
+          <h3>Motion<span class="dot">.</span></h3>
+          <p>Giving visual identities movement and behavior.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 08 — OFF THE RECORD ======================= -->
+  <section class="sec w-1100" id="off-the-record" aria-labelledby="off-h">
+    <div class="wrap">
+      <div class="off-grid">
+        <div>
+          <p class="eyebrow reveal">Off the record</p>
+          <h2 class="off-h reveal" id="off-h">A few things that don't fit on a résumé<span class="dot">.</span></h2>
+        </div>
+        <ol class="facts reveal" role="list" style="--d:2">
+          <li>Built the physique he now coaches others toward</li>
+          <li>Dresses sharp, no occasion needed</li>
+          <li>Procrastinates, then solves it in his head first</li>
+          <li>Always has dark chocolate within reach</li>
+          <li>Prefers solo bike rides to think</li>
+          <li>Ranked in a photography course, still calls himself a beginner</li>
+          <li>Genuinely loves coaching others through their transformation</li>
+          <li>Sees a system in everything, not just brands</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 09 — FINAL CTA ======================= -->
+  <section class="sec w-1400" id="cta" aria-labelledby="cta-h">
+    <div class="wrap">
+      <h2 class="cta-h reveal" id="cta-h"><span>Enough about me<span class="dot">.</span></span><span class="b">Here's the work<span class="dot">.</span></span></h2>
+      <div class="cta-row reveal" style="--d:2">
+        <a class="btn" href="index.html#work">View case studies <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn-text" href="index.html#contact">Get in touch <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer micro">
+  <span>© 2026 Joswin Kumar</span>
+  <a class="ul" href="index.html">Back to portfolio</a>
+</footer>
 
 <script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{
+(function(){
+  var header=document.querySelector('.site-header');
+  function onScroll(){ header.classList.toggle('is-scrolled', window.scrollY>8); }
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
       if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
     });
-  }, {threshold:.15});
-  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+  },{threshold:.12, rootMargin:'0px 0px -5% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
 </script>
-
-<script>
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{
-      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-    });
-  }, {threshold:.15});
-  document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
-</script>
-
 </body>
 </html>
