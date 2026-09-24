@@ -155,6 +155,14 @@ footer{border-top:1px solid var(--line);padding:32px 0;display:flex;justify-cont
   .project-img img{transition:none;}
 }
 a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+
+/* interaction layer */
+.hero-copy>*{opacity:0;transform:translateY(18px);animation:heroIn .8s var(--ease) forwards}.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-portrait{opacity:0;transform:translateY(18px) scale(.985);animation:heroIn .95s .18s var(--ease) forwards}
+@keyframes heroIn{to{opacity:1;transform:none}}
+.project-img{overflow:hidden}.project-img img,.project-img video{will-change:transform}.project-info h3 a{background:linear-gradient(var(--ink),var(--ink)) 0 100%/0 2px no-repeat;transition:background-size .45s var(--ease)}.project.is-active .project-info h3 a{background-size:100% 2px}.project-num{transition:color .35s var(--ease),transform .35s var(--ease)}.project.is-active .project-num{color:var(--ink);transform:translateX(4px)}
+.meta-strip-inner{overflow:hidden}.meta-strip-item{transition:transform .35s var(--ease)}
+@media(hover:hover) and (pointer:fine){.project:hover .project-num{color:var(--ink);transform:translateX(4px)}.project:hover .project-info h3 a{background-size:100% 2px}.about-teaser{transition:transform .55s var(--ease)}.about-teaser:hover{transform:translateY(-6px)}.about-teaser-arrow{transition:transform .35s var(--ease)}.about-teaser:hover .about-teaser-arrow{transform:translateX(7px)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.hero-copy>*,.hero-portrait,.project-img img,.project-img video,.project-num,.about-teaser,.about-teaser-arrow{animation:none!important;transition:none!important;transform:none!important;opacity:1!important}}
 </style>
 </head>
 <body>
@@ -244,13 +252,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
     <div class="project reveal" data-case-study="jfit.html">
       <div class="project-grid">
         <div class="project-num">03</div>
-        <a class="project-img" href="jfit.html" aria-label="View JFIT case study">
-          <img loading="lazy" src="jfit_hero.jpg" alt="JFIT brand" width="1800" height="1800">
+        <a class="project-img" href="talenzap.html" aria-label="View Talenzap case study">
+          <img loading="lazy" src="talenzap_hero.jpg" alt="Talenzap brand and digital system" width="1600" height="1200">
         </a>
         <div class="project-info">
-          <h3><a href="jfit.html">JFIT</a></h3>
-          <p class="project-summary">Reframing a gym brand into a connected wellness ecosystem.</p><div class="disc">Brand Strategy · Identity System · Digital Guidelines</div>
-          <a class="view" href="jfit.html">View Case Study &rarr;</a>
+          <h3><a href="talenzap.html">Talenzap</a></h3>
+          <p class="project-summary">Rebuilding a digital identity through a high-stakes brand transition.</p><div class="disc">Brand Strategy · UX/UI · Identity System</div>
+          <a class="view" href="talenzap.html">View Case Study &rarr;</a>
         </div>
       </div>
     </div>
@@ -258,13 +266,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
     <div class="project reveal" data-case-study="talenzap.html">
       <div class="project-grid">
         <div class="project-num">04</div>
-        <a class="project-img" href="talenzap.html" aria-label="View Talenzap case study">
-          <img loading="lazy" src="talenzap_hero.jpg" alt="Talenzap brand" width="1600" height="1200">
+        <a class="project-img" href="jfit.html" aria-label="View JFIT case study">
+          <img loading="lazy" src="jfit_hero.jpg" alt="JFIT brand" width="1800" height="1800">
         </a>
         <div class="project-info">
-          <h3><a href="talenzap.html">Talenzap</a></h3>
-          <p class="project-summary">Rebuilding a digital identity through a high-stakes brand transition.</p><div class="disc">Brand Strategy · UX/UI · Identity System</div>
-          <a class="view" href="talenzap.html">View Case Study &rarr;</a>
+          <h3><a href="jfit.html">JFIT</a></h3>
+          <p class="project-summary">Reframing a gym brand into a connected wellness ecosystem.</p><div class="disc">Brand Strategy · Identity System · Digital Guidelines</div>
+          <a class="view" href="jfit.html">View Case Study &rarr;</a>
         </div>
       </div>
     </div>
@@ -377,10 +385,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
 </footer>
 
 <script>
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-}, {threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(entries=>entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(!reduced){
+  const projects=[...document.querySelectorAll('.project')];
+  const activeIO=new IntersectionObserver(entries=>entries.forEach(en=>en.target.classList.toggle('is-active',en.isIntersecting)),{threshold:.58});
+  projects.forEach(el=>activeIO.observe(el));
+  const portrait=document.querySelector('.hero-portrait img');
+  window.addEventListener('scroll',()=>{if(window.scrollY<700&&portrait) portrait.style.transform='translateY('+Math.min(window.scrollY*.035,18)+'px)'},{passive:true});
+}else{
+  document.querySelectorAll('video[autoplay]').forEach(v=>{v.pause();v.removeAttribute('autoplay')});
+}
 </script>
 
 </body>
