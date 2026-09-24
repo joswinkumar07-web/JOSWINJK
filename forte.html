@@ -227,19 +227,6 @@
   </div>
 </section>
 
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Implementation &amp; Real-World Application section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
-
 <!-- Section 4: Implementation & Real-World Application -->
 <section class="cs-section">
   <div class="wrap">
@@ -263,16 +250,16 @@
 
     <div class="cs-image-row" style="margin-top:8px;">
       <div>
-        <img data-src="forte2_phone_tilt.jpg" width="1600" height="1200" alt="Forte Series digital static poster on mobile ad interface">
+        <img src="forte2_phone_tilt.jpg" width="1600" height="1200" alt="Forte Series digital static poster on mobile ad interface">
         <div class="img-caption">4.1 Digital static posters, mobile ad interfaces</div>
       </div>
       <div>
-        <img data-src="forte2_busstop.jpg" width="1600" height="900" alt="Forte Series subway billboard mockup at night">
+        <img src="forte2_busstop.jpg" width="1600" height="900" alt="Forte Series subway billboard mockup at night">
         <div class="img-caption">4.2 Real-world subway billboard application</div>
       </div>
     </div>
 
-    <video data-src="forte2_motion.mp4" class="cs-image" style="margin-top:20px;" muted loop playsinline controls></video>
+    <video src="forte2_motion.mp4" class="cs-image" style="margin-top:20px;" muted loop playsinline controls></video>
     <div class="img-caption">Motion poster, Luma AI-assisted cinematic cut</div>
 
     <h3 class="sub-head">Taking It Off-Screen</h3>
@@ -281,7 +268,7 @@
       <li><b>Digital &amp; Social Formats:</b> Adapted static posters into optimized mobile and display layouts (1080 &times; 1350) targeting urban professionals.</li>
       <li><b>Brand Integrity Standards:</b> Maintained strict balance between bold typographic messaging ("Clean Finish Effortlessly Achieved") and product feature callouts.</li>
     </ul>
-    <img class="cs-image" data-src="forte2_aframe.jpg" width="1600" height="1067" alt="Forte Series A-frame street signage mockup">
+    <img class="cs-image" src="forte2_aframe.jpg" width="1600" height="1067" alt="Forte Series A-frame street signage mockup">
     <div class="img-caption">Physical application, A-frame street signage</div>
   </div>
 </section>
@@ -294,44 +281,6 @@
     <a class="back-all" href="index.html">&larr; Back to all work</a>
   </div>
 </footer>
-
-</div>
-
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-      if (el.tagName === 'VIDEO') el.load();
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>
