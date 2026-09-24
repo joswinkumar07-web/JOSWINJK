@@ -222,7 +222,7 @@
   <div class="wrap">
     <div class="eyebrow">Visual Identity</div>
     <h2>Crafting the Visual System</h2>
-    <p class="lead">The new identity centers around an interconnected emblem symbolizing holistic care. Paired with a dual-type system, <b style="color:var(--ink)">Space Grotesk</b> for modern, structural headings and <b style="color:var(--ink)">Lora</b> for approachable, editorial prose, the identity easily flexes between tech interfaces and reflective mental wellness touchpoints.</p>
+    <p class="lead">The strategic shift from performance-first fitness to whole-person wellness shaped every design decision. The identity centers on an interconnected emblem that gives physical training, mental well-being and coaching a shared visual anchor. Paired with a dual-type system, <b style="color:var(--ink)">Space Grotesk</b> for modern, structural headings and <b style="color:var(--ink)">Lora</b> for approachable, editorial prose, the identity easily flexes between tech interfaces and reflective mental wellness touchpoints.</p>
 
     <div class="swatch-row">
       <div class="swatch-item"><div class="swatch-block" style="background:#FF421D"></div><span>Brand Vermilion<br>#FF421D</span></div>
@@ -238,26 +238,13 @@
   </div>
 </section>
 
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Implementation section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
-
 <!-- Section 5: Implementation & Real-World Application -->
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">Implementation</div>
     <h2>Physical &amp; Digital Ecosystem</h2>
-    <p class="lead">From mobile app components to physical apparel and merchandise, the rebranded identity presents a clean, premium visual presence. Standardized usage rules, color variations, and logo &ldquo;don'ts&rdquo; ensure visual integrity across every customer interaction point.</p>
-    <img class="cs-image" data-src="jfit_implementation.jpg" width="1800" height="1013" alt="JFIT app onboarding screen and tote bag mockup">
+    <p class="lead">I translated the identity into a system that could move between digital product surfaces, apparel and merchandise without changing character. Usage rules, responsive lockups and color variants created the consistency needed for teams to extend the brand.</p>
+    <img class="cs-image" src="jfit_implementation.jpg" width="1800" height="1013" alt="JFIT app onboarding screen and tote bag mockup">
     <div class="img-caption">App onboarding, and tote bag application</div>
   </div>
 </section>
@@ -271,42 +258,7 @@
   </div>
 </footer>
 
-</div>
 
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>
