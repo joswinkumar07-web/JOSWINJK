@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Flyn, Instant Fashion Delivery Brand Refresh, Joswin Kumar</title>
-<meta name="description" content="Flyn, Instant Fashion Delivery Brand Refresh. A branding case study by Joswin Kumar.">
+<meta name="description" content="Flyn brand identity case study by Joswin Kumar: designing a scalable visual system for an instant-fashion delivery platform.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/flyn.html">
@@ -40,31 +40,31 @@
   img{display:block; max-width:100%; height:auto;}
   h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.05; text-wrap:balance;}
   p{text-wrap:pretty;}
-  .wrap{max-width:1100px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 40px;}
   @media (max-width:720px){ .wrap{padding:0 22px;} .cs-hero-img{max-height:none; object-fit:contain; background:var(--bg-elev);} }
   .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
 
   header{position:sticky; top:0; z-index:50; background:rgba(11,11,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  .header-inner{max-width:1100px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  .header-inner{max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
   @media (max-width:720px){ .header-inner{padding:18px 22px;} }
   .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
   .back-link:hover{color:var(--accent);}
   .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
 
   /* hero */
-  .cs-hero{padding:64px 0 40px;}
+  .cs-hero{padding:clamp(72px,9vw,132px) 0 clamp(56px,7vw,96px);}
   .cs-hero h1{font-size:clamp(40px,7vw,84px); margin:18px 0 20px;}
   .cs-hero .subtitle{font-size:18px; color:var(--ink-dim); max-width:620px; line-height:1.6; margin-bottom:36px;}
   .meta-row{display:flex; gap:48px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--line); margin-bottom:40px;}
   .meta-row div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
   .meta-row div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0;}
-  .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
+  .cs-hero-img{width:100%; max-height:760px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
 
   /* content sections */
-  .cs-section{padding:var(--space-48) 0;}
+  .cs-section{padding:clamp(72px,9vw,128px) 0;border-top:1px solid var(--line);}
   @media (max-width:720px){ .cs-section{padding:var(--space-32) 0;} }
   .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
-  .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
+  .cs-section .lead{font-size:clamp(17px,1.55vw,21px); line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
   .pull-quote{
     font-family:'Space Grotesk',sans-serif; font-size:clamp(24px,3.5vw,36px); font-weight:500;
     color:var(--ink); border-left:2px solid var(--accent); padding:6px 0 6px 28px; margin:40px 0; max-width:640px;
@@ -94,40 +94,8 @@
   }
   footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
 
-  /* pin gate, medium-style: public preview up top, gated content fades and prompts inline */
-  .gate-wrap{position:relative; max-height:420px; overflow:hidden; transition:max-height .6s var(--ease-in-out);}
-  .gate-wrap.unlocked{max-height:none; overflow:visible;}
-  .gate-fade{
-    position:absolute; left:0; right:0; bottom:0; height:220px; pointer-events:none;
-    background:linear-gradient(to bottom, transparent, var(--bg) 75%);
-  }
-  .gate-wrap.unlocked .gate-fade{display:none;}
-  .gate-prompt{
-    position:absolute; left:50%; bottom:24px; transform:translateX(-50%); width:calc(100% - 40px); max-width:420px;
-    background:var(--bg-elev); border:1px solid var(--line); border-radius:8px; padding:30px 28px; text-align:center;
-    box-shadow:0 20px 60px -15px rgba(0,0,0,.7);
-  }
-  .gate-wrap.unlocked .gate-prompt{display:none;}
-  .gate-prompt .lock-icon{font-size:20px; margin-bottom:14px;}
-  .gate-prompt h3{font-size:18px; margin-bottom:8px;}
-  .gate-prompt p{font-size:13px; color:var(--ink-dim); margin-bottom:20px; line-height:1.6;}
-  .pin-input-row{display:flex; gap:8px;}
-  .pin-input{
-    flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
-    font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:.05em; text-align:center; padding:11px; outline:none;
-  }
-  .pin-input:focus{border-color:var(--accent);}
-  .pin-submit{
-    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 16px;
-    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
-  }
-  .pin-submit:active{transform:scale(.95);}
-  .pin-error{color:#e05a4a; font-size:12px; margin-top:10px; height:14px; opacity:0; transition:opacity .2s ease;}
-  .pin-error.show{opacity:1;}
-  .gate-prompt.shake{animation:shake .4s;}
-  @keyframes shake{20%{transform:translateX(calc(-50% - 6px));}40%{transform:translateX(calc(-50% + 6px));}60%{transform:translateX(calc(-50% - 4px));}80%{transform:translateX(calc(-50% + 4px));}100%{transform:translateX(-50%);}}
-
-  @media (prefers-reduced-motion:reduce){ .gate-prompt.shake{animation:none;} .gate-wrap{transition:none;} }
+  .cs-section .eyebrow{margin-bottom:18px}.cs-section h2{max-width:900px}.cs-image{margin-top:clamp(28px,4vw,56px)}.cs-image-row{margin-top:clamp(28px,4vw,56px)}
+.impact-pair{grid-template-columns:1.2fr .8fr}.impact-pair>div:first-child img{aspect-ratio:4/3;object-fit:cover}.impact-pair>div:last-child img{aspect-ratio:4/3;object-fit:cover}@media(max-width:720px){.impact-pair{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -144,13 +112,13 @@
   <div class="wrap">
     <div class="eyebrow">Brand Identity / E-commerce</div>
     <h1>Flyn</h1>
-    <p class="subtitle">Flyn delivers curated fashion in minutes, bypassing traditional delivery wait times for a seamless shopping experience. We designed a versatile identity system built for scale, spanning digital interfaces, packaging, and rider gear.</p>
+    <p class="subtitle">A scalable identity system for a fashion-delivery platform where speed had to remain recognizable across product, packaging and the street.</p>
     <div class="meta-row">
-      <div>Client<span>Flyn Tech Inc.</span></div>
+      <div>Client<span>Flyn Tech Inc.</span></div><div>Role<span>Lead Brand Designer</span></div>
       <div>Release<span>July 2025</span></div>
       <div>Category<span>Brand Identity / E-commerce</span></div>
     </div>
-    <img class="cs-hero-img" src="flyn_hero_van.jpg" width="1800" height="1200" alt="Flyn branded delivery van">
+    <img class="cs-hero-img" fetchpriority="high" src="flyn_hero_van.jpg" width="1800" height="1200" alt="Flyn branded delivery van">
   </div>
 </section>
 
@@ -158,8 +126,8 @@
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">The Challenge</div>
-    <h2>Preserving Speed while Scaling Identity</h2>
-    <p class="lead">Flyn required a unified, highly recognizable brand framework to articulate its core value proposition: instant fashion delivery. The challenge was building an agile, tiered logo architecture and visual system capable of working seamlessly across diverse touchpoints, from high-density mobile apps to physical delivery backpacks, without diluting brand integrity.</p>
+    <h2>Making Speed Recognizable at Every Scale</h2>
+    <p class="lead">Flyn's promise was speed, but the identity had to stay recognizable in very different contexts: a small app surface, packaging, delivery gear and physical environments. I focused on building one visual system that could compress or expand without losing the brand.</p>
     <div class="pull-quote">&ldquo;Want it in minutes? Flyn it!&rdquo;</div>
 
     <div class="pillars-cs">
@@ -189,39 +157,26 @@
   <div class="wrap">
     <div class="eyebrow">Visual Identity</div>
     <h2>Crafting the Visual System</h2>
-    <p class="lead">Our creative team defined a precise, scalable system anchored by custom typography (Debra &amp; Poppins) and rigorous clear-space specifications, a 17px margin buffer rule applied consistently across every lockup.</p>
-    <p class="lead">We developed a tiered logo framework to adapt across various screen sizes and physical assets, eliminating brand misuse across marketing and product interfaces.</p>
-    <img class="cs-image" src="flyn_visual_system.jpg" width="1800" height="1013" alt="Flyn logo grid system and packaging mockup">
+    <p class="lead">I built the identity around a tiered logo architecture, Debra and Poppins typography, and repeatable spacing rules. The goal was not more brand rules—it was fewer opportunities for the identity to break as it moved between teams and formats.</p>
+    <p class="lead">I developed a tiered logo framework to adapt across various screen sizes and physical assets, eliminating brand misuse across marketing and product interfaces.</p>
+    <img loading="lazy" class="cs-image" src="flyn_visual_system.jpg" width="1800" height="1013" alt="Flyn logo grid system and packaging mockup">
     <div class="img-caption">Logo construction grid, and in-store packaging locker mockup</div>
   </div>
 </section>
-
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Impact &amp; Results section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
 
 <!-- Section 4: Impact & Results -->
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">Impact &amp; Results</div>
     <h2>Results &amp; Brand Impact</h2>
-    <p class="lead">The refreshed visual system elevated Flyn's market presence, establishing a premium yet accessible brand identity. With standardized guidelines and standardized UI components, Flyn achieved complete visual consistency across all customer touchpoints, solidifying its position as a fast-fashion delivery pioneer.</p>
-    <div class="cs-image-row">
+    <p class="lead">The final system established a consistent visual language across mobile, packaging and delivery touchpoints. I translated the identity into reusable rules and production-ready applications so the brand could scale without relying on one-off design decisions.</p>
+    <div class="cs-image-row impact-pair">
       <div>
-        <img data-src="flyn_impact_extra.jpg" width="1400" height="1050" alt="Flyn brand application">
+        <img loading="lazy" src="flyn_impact_extra.jpg" width="1400" height="1050" alt="Flyn brand application">
         <div class="img-caption">Brand application</div>
       </div>
       <div>
-        <img data-src="flyn_impact_iphone.jpg" width="1400" height="1083" alt="Flyn mobile app icon on home screen">
+        <img loading="lazy" src="flyn_impact_iphone.jpg" width="1400" height="1083" alt="Flyn mobile app icon on home screen">
         <div class="img-caption">Mobile app launch icon</div>
       </div>
     </div>
@@ -237,42 +192,7 @@
   </div>
 </footer>
 
-</div>
 
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Talenzap, Strategic Rebranding & Digital Identity System, Joswin Kumar</title>
-<meta name="description" content="Talenzap, Strategic Rebranding & Digital Identity System. A branding case study by Joswin Kumar.">
+<meta name="description" content="Talenzap brand and UX case study by Joswin Kumar: rebuilding an identity and digital system through a high-stakes brand transition.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/talenzap.html">
@@ -40,31 +40,31 @@
   img{display:block; max-width:100%; height:auto;}
   h1,h2,h3{font-family:'Space Grotesk',sans-serif; font-weight:500; letter-spacing:-.02em; line-height:1.05; text-wrap:balance;}
   p{text-wrap:pretty;}
-  .wrap{max-width:1100px; margin:0 auto; padding:0 40px;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 40px;}
   @media (max-width:720px){ .wrap{padding:0 22px;} .cs-hero-img{max-height:none; object-fit:contain; background:var(--bg-elev);} }
   .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent);}
 
   header{position:sticky; top:0; z-index:50; background:rgba(11,11,10,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  .header-inner{max-width:1100px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
+  .header-inner{max-width:1240px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;}
   @media (max-width:720px){ .header-inner{padding:18px 22px;} }
   .back-link{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.05em; color:var(--ink-dim); display:flex; align-items:center; gap:8px; transition:color .2s ease;}
   .back-link:hover{color:var(--accent);}
   .logo{font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:600;}
 
-  .cs-hero{padding:64px 0 40px;}
+  .cs-hero{padding:clamp(72px,9vw,132px) 0 clamp(56px,7vw,96px);}
   .cs-hero h1{font-size:clamp(40px,7vw,84px); margin:18px 0 6px;}
   .cs-hero h2.headline{font-size:clamp(18px,2.4vw,26px); color:var(--ink-dim); font-weight:400; font-family:'Inter',sans-serif; margin-bottom:20px; max-width:680px;}
   .cs-hero .subtitle{font-size:16px; color:var(--ink-dim); max-width:640px; line-height:1.7; margin-bottom:36px;}
   .meta-row{display:flex; gap:48px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--line); margin-bottom:40px;}
   .meta-row div{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint); letter-spacing:.05em; text-transform:uppercase;}
   .meta-row div span{display:block; margin-top:6px; font-family:'Inter',sans-serif; font-size:14px; color:var(--ink); font-weight:400; text-transform:none; letter-spacing:0;}
-  .cs-hero-img{width:100%; max-height:560px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
+  .cs-hero-img{width:100%; max-height:760px; object-fit:cover; border-radius:4px; border:1px solid var(--line);}
 
-  .cs-section{padding:var(--space-48) 0;}
+  .cs-section{padding:clamp(72px,9vw,128px) 0;border-top:1px solid var(--line);}
   @media (max-width:720px){ .cs-section{padding:var(--space-32) 0;} }
   .cs-section h2{font-size:clamp(28px,4vw,44px); margin-bottom:22px;}
   .cs-section h3.sub-head{font-size:19px; margin:36px 0 14px;}
-  .cs-section .lead{font-size:17px; line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
+  .cs-section .lead{font-size:clamp(17px,1.55vw,21px); line-height:1.75; color:var(--ink-dim); max-width:680px; margin-bottom:32px;}
   .cs-section ul.plain{list-style:none; max-width:680px; margin-bottom:8px;}
   .cs-section ul.plain li{font-size:15px; line-height:1.75; color:var(--ink-dim); margin-bottom:14px; padding-left:20px; position:relative;}
   .cs-section ul.plain li::before{content:''; position:absolute; left:0; top:8px; width:8px; height:1.5px; background:var(--accent);}
@@ -102,40 +102,8 @@
   }
   footer.cs-footer a.back-all:hover{background:var(--ink); color:#0b0b0a;}
 
-  /* pin gate, medium-style: public preview up top, gated content fades and prompts inline */
-  .gate-wrap{position:relative; max-height:420px; overflow:hidden; transition:max-height .6s var(--ease-in-out);}
-  .gate-wrap.unlocked{max-height:none; overflow:visible;}
-  .gate-fade{
-    position:absolute; left:0; right:0; bottom:0; height:220px; pointer-events:none;
-    background:linear-gradient(to bottom, transparent, var(--bg) 75%);
-  }
-  .gate-wrap.unlocked .gate-fade{display:none;}
-  .gate-prompt{
-    position:absolute; left:50%; bottom:24px; transform:translateX(-50%); width:calc(100% - 40px); max-width:420px;
-    background:var(--bg-elev); border:1px solid var(--line); border-radius:8px; padding:30px 28px; text-align:center;
-    box-shadow:0 20px 60px -15px rgba(0,0,0,.7);
-  }
-  .gate-wrap.unlocked .gate-prompt{display:none;}
-  .gate-prompt .lock-icon{font-size:20px; margin-bottom:14px;}
-  .gate-prompt h3{font-size:18px; margin-bottom:8px;}
-  .gate-prompt p{font-size:13px; color:var(--ink-dim); margin-bottom:20px; line-height:1.6;}
-  .pin-input-row{display:flex; gap:8px;}
-  .pin-input{
-    flex:1; background:var(--bg); border:1px solid var(--line); border-radius:4px; color:var(--ink);
-    font-family:'IBM Plex Mono',monospace; font-size:15px; letter-spacing:.05em; text-align:center; padding:11px; outline:none;
-  }
-  .pin-input:focus{border-color:var(--accent);}
-  .pin-submit{
-    background:var(--accent); color:#0b0b0a; border:none; border-radius:4px; padding:0 16px;
-    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer;
-  }
-  .pin-submit:active{transform:scale(.95);}
-  .pin-error{color:#e05a4a; font-size:12px; margin-top:10px; height:14px; opacity:0; transition:opacity .2s ease;}
-  .pin-error.show{opacity:1;}
-  .gate-prompt.shake{animation:shake .4s;}
-  @keyframes shake{20%{transform:translateX(calc(-50% - 6px));}40%{transform:translateX(calc(-50% + 6px));}60%{transform:translateX(calc(-50% - 4px));}80%{transform:translateX(calc(-50% + 4px));}100%{transform:translateX(-50%);}}
-
-  @media (prefers-reduced-motion:reduce){ .gate-prompt.shake{animation:none;} .gate-wrap{transition:none;} }
+  .cs-section .eyebrow{margin-bottom:18px}.cs-section h2{max-width:900px}.cs-image{margin-top:clamp(28px,4vw,56px)}.cs-image-row{margin-top:clamp(28px,4vw,56px)}
+.evidence-grid{grid-template-columns:1.35fr .85fr .85fr;align-items:stretch}.evidence-grid img{width:100%;height:100%;object-fit:cover}.evidence-wide{grid-template-columns:1.35fr .65fr}.evidence-wide img{width:100%;height:100%;object-fit:cover}@media(max-width:720px){.evidence-grid,.evidence-wide{grid-template-columns:1fr}.evidence-grid img,.evidence-wide img{height:auto}}
 </style>
 </head>
 <body>
@@ -152,14 +120,14 @@
   <div class="wrap">
     <div class="eyebrow">Brand Strategy / Visual Identity / UI-UX Guidelines</div>
     <h1>Talenzap</h1>
-    <h2 class="headline">Your Stage to Win: Strategic Rebranding &amp; Digital Identity System</h2>
-    <p class="subtitle">Talenzap (formerly Arenastars) transformed its visual identity into a high-energy platform designed to empower talent, modern gaming, and interactive engagement, unifying modern UI components, bold typography, and adaptive brand architecture into a seamless digital experience.</p>
+    <h2 class="headline">Rebuilding an Identity Through a Brand Transition</h2>
+    <p class="subtitle">A brand and product-system transition from Arenastars to Talenzap, carried across identity, mobile experiences and operational interfaces.</p>
     <div class="meta-row">
-      <div>Client<span>Talenzap Inc. (formerly Arenastars)</span></div>
+      <div>Client<span>Talenzap Inc. (formerly Arenastars)</span></div><div>Role<span>Brand &amp; UX Designer</span></div>
       <div>Release<span>2026</span></div>
       <div>Category<span>Brand Strategy, Visual Identity &amp; UI/UX Guidelines</span></div>
     </div>
-    <img class="cs-hero-img" src="talenzap_hero.jpg" width="1600" height="1200" alt="Talenzap brand hero banner mockup">
+    <img class="cs-hero-img" fetchpriority="high" src="talenzap_hero.jpg" width="1600" height="1200" alt="Talenzap brand hero banner mockup">
   </div>
 </section>
 
@@ -167,7 +135,7 @@
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">The Challenge</div>
-    <h2>Pivot to Talenzap: Overcoming Domain Constraints &amp; Rebuilding Identity</h2>
+    <h2>Rebuilding the Brand When the Name Changed</h2>
     <p class="lead">When domain availability constraints prevented the reservation of the original brand name "Arenastars," the team executed a strategic pivot to "Talenzap." Beyond a simple name change, the challenge required designing an adaptable visual system that could seamlessly transition across mobile UI, interactive digital touchpoints, high-contrast dark modes, and physical brand collateral under a bold new unified tagline.</p>
     <div class="pull-quote">&ldquo;Your Stage to Win.&rdquo;</div>
 
@@ -208,23 +176,10 @@
     </div>
     <p class="lead" style="margin-top:24px;">Typography hierarchy: <b style="color:var(--ink)">Nunito Sans Bold</b> for headings, <b style="color:var(--ink)">Semibold</b> for subheadings, <b style="color:var(--ink)">Medium</b> for titles, and <b style="color:var(--ink)">Regular</b> for body copy.</p>
 
-    <img class="cs-image" src="talenzap_old_logos.jpg" width="1600" height="900" alt="Arenastars and Talenzap early logo marks">
+    <img loading="lazy" class="cs-image" src="talenzap_old_logos.jpg" width="1600" height="900" alt="Arenastars and Talenzap early logo marks">
     <div class="img-caption">Before the pivot: early Arenastars and Talenzap logo marks</div>
   </div>
 </section>
-
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Implementation &amp; Results section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
 
 <!-- Section 4: Implementation & Real-World Application -->
 <section class="cs-section">
@@ -238,14 +193,14 @@
       <li><b>Interactive Screen Optimizations:</b> Overhauled core mobile app flows and primary navigation screens to ensure frictionless user journeys during live talent streams and gaming events.</li>
       <li><b>Component Refinement:</b> Implemented high-contrast CTA states, interactive buttons, and responsive cards utilizing the refreshed Talenzap palette for maximum visual clarity on mobile interfaces.</li>
     </ul>
-    <div class="cs-image-row cols-3">
-      <img data-src="talenzap_user1.jpg" width="1600" height="900" alt="Talenzap user module dark mode screens">
-      <img data-src="talenzap_user2.jpg" width="1600" height="900" alt="Talenzap user module phone mockup on staircase">
-      <img data-src="talenzap_user3.jpg" width="1600" height="900" alt="Talenzap user module phone mockups">
+    <div class="cs-image-row cols-3 evidence-grid">
+      <img loading="lazy" src="talenzap_user1.jpg" width="1600" height="900" alt="Talenzap user module dark mode screens">
+      <img loading="lazy" src="talenzap_user2.jpg" width="1600" height="900" alt="Talenzap user module phone mockup on staircase">
+      <img loading="lazy" src="talenzap_user3.jpg" width="1600" height="900" alt="Talenzap user module phone mockups">
     </div>
-    <div class="cs-image-row" style="margin-top:20px;">
-      <img data-src="talenzap_user4.jpg" width="1600" height="900" alt="Talenzap user module light mode home screens">
-      <img data-src="talenzap_user5.jpg" width="1600" height="900" alt="Talenzap user module mobile mockup">
+    <div class="cs-image-row evidence-wide" style="margin-top:20px;">
+      <img loading="lazy" src="talenzap_user4.jpg" width="1600" height="900" alt="Talenzap user module light mode home screens">
+      <img loading="lazy" src="talenzap_user5.jpg" width="1600" height="900" alt="Talenzap user module mobile mockup">
     </div>
 
     <h3 class="sub-head">Behind the Dashboard</h3>
@@ -254,8 +209,8 @@
       <li><b>System Consistency:</b> Enforced precise spacing, grid alignments, and component states across dense admin tables and action screens to streamline backend workflows for platform operators.</li>
     </ul>
     <div class="cs-image-row">
-      <img data-src="talenzap_admin1.jpg" width="1600" height="900" alt="Talenzap admin dashboard competitions view">
-      <img data-src="talenzap_admin2.jpg" width="1600" height="900" alt="Talenzap admin dashboard winner details view">
+      <img loading="lazy" src="talenzap_admin1.jpg" width="1600" height="900" alt="Talenzap admin dashboard competitions view">
+      <img loading="lazy" src="talenzap_admin2.jpg" width="1600" height="900" alt="Talenzap admin dashboard winner details view">
     </div>
 
     <h3 class="sub-head">Taking It Off-Screen</h3>
@@ -263,7 +218,7 @@
       <li><b>Spatial &amp; Merchandise Presence:</b> Applied the updated emblem and typographic rules across physical collateral, apparel, and signage mockups.</li>
       <li><b>Brand Integrity Standards:</b> Defined explicit "Logo Don'ts", minimum clearance boundaries, and color usage guidelines to maintain visual consistency across all third-party integrations and physical touchpoints.</li>
     </ul>
-    <img class="cs-image" data-src="talenzap_physical.jpg" width="1600" height="1200" alt="Talenzap stage signage mockup">
+    <img loading="lazy" class="cs-image" src="talenzap_physical.jpg" width="1600" height="1200" alt="Talenzap stage signage mockup">
     <div class="img-caption">Physical brand application, event stage signage</div>
   </div>
 </section>
@@ -277,42 +232,7 @@
   </div>
 </footer>
 
-</div>
 
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>
