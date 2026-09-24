@@ -189,39 +189,26 @@
   <div class="wrap">
     <div class="eyebrow">Visual Identity</div>
     <h2>Crafting the Visual System</h2>
-    <p class="lead">Our creative team defined a precise, scalable system anchored by custom typography (Debra &amp; Poppins) and rigorous clear-space specifications, a 17px margin buffer rule applied consistently across every lockup.</p>
-    <p class="lead">We developed a tiered logo framework to adapt across various screen sizes and physical assets, eliminating brand misuse across marketing and product interfaces.</p>
+    <p class="lead">I designed a precise, scalable system anchored by custom typography (Debra &amp; Poppins) and rigorous clear-space specifications, a 17px margin buffer rule applied consistently across every lockup.</p>
+    <p class="lead">I developed a tiered logo framework to adapt across various screen sizes and physical assets, eliminating brand misuse across marketing and product interfaces.</p>
     <img class="cs-image" src="flyn_visual_system.jpg" width="1800" height="1013" alt="Flyn logo grid system and packaging mockup">
     <div class="img-caption">Logo construction grid, and in-store packaging locker mockup</div>
   </div>
 </section>
-
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Impact &amp; Results section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
 
 <!-- Section 4: Impact & Results -->
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">Impact &amp; Results</div>
     <h2>Results &amp; Brand Impact</h2>
-    <p class="lead">The refreshed visual system elevated Flyn's market presence, establishing a premium yet accessible brand identity. With standardized guidelines and standardized UI components, Flyn achieved complete visual consistency across all customer touchpoints, solidifying its position as a fast-fashion delivery pioneer.</p>
+    <p class="lead">The final system established a consistent visual language across mobile, packaging and delivery touchpoints. I translated the identity into reusable rules and production-ready applications so the brand could scale without relying on one-off design decisions.</p>
     <div class="cs-image-row">
       <div>
-        <img data-src="flyn_impact_extra.jpg" width="1400" height="1050" alt="Flyn brand application">
+        <img src="flyn_impact_extra.jpg" width="1400" height="1050" alt="Flyn brand application">
         <div class="img-caption">Brand application</div>
       </div>
       <div>
-        <img data-src="flyn_impact_iphone.jpg" width="1400" height="1083" alt="Flyn mobile app icon on home screen">
+        <img src="flyn_impact_iphone.jpg" width="1400" height="1083" alt="Flyn mobile app icon on home screen">
         <div class="img-caption">Mobile app launch icon</div>
       </div>
     </div>
@@ -237,42 +224,7 @@
   </div>
 </footer>
 
-</div>
 
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>
