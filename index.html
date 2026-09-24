@@ -39,7 +39,7 @@ h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-
 p{text-wrap:pretty;}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
 .reveal.in{opacity:1;transform:translateY(0);}
-section{padding:96px 0;}
+section{padding:clamp(88px,9vw,136px) 0;}
 @media (max-width:720px){ section{padding:56px 0;} }
 .divider{border-top:1px solid var(--line);}
 
@@ -87,20 +87,20 @@ nav.links a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width
 .section-head p{max-width:320px;color:var(--ink-dim);font-size:14px;line-height:1.6;}
 
 /* ---------- work ---------- */
-.project{border-top:1px solid var(--line);padding:56px 0;}
+.project{border-top:1px solid var(--line);padding:clamp(56px,7vw,92px) 0;}
 .project:last-child{border-bottom:1px solid var(--line);}
 .project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:center;}
 .project-num{grid-column:1/2;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-faint);align-self:start;}
-.project-img{grid-column:2/8;aspect-ratio:4/3;overflow:hidden;background:var(--bg-alt);}
-.project-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
-@media (hover:hover) and (pointer:fine){ .project:hover .project-img img{transform:scale(1.04);} }
-.project-info{grid-column:9/13;}
+.project-img{grid-column:2/9;aspect-ratio:16/11;overflow:hidden;background:var(--bg-alt);}
+.project-img img,.project-img video{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);display:block;}
+@media (hover:hover) and (pointer:fine){ .project:hover .project-img img,.project:hover .project-img video{transform:scale(1.025);} }
+.project-info{grid-column:10/13;}
 .project-info h3{font-size:clamp(26px,3vw,38px);text-transform:uppercase;transition:color .2s ease;}
 @media (hover:hover) and (pointer:fine){ .project:hover .project-info h3{color:var(--ink-dim);} }
 .project-summary{margin-top:14px;max-width:34ch;font-size:14px;line-height:1.55;color:var(--ink-dim);}.project-info .disc{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);}
 .project-info .view{margin-top:20px;display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
-.project:nth-child(even) .project-img{grid-column:6/13;order:2;}
-.project:nth-child(even) .project-info{grid-column:1/5;order:1;}
+.project:nth-child(even) .project-img{grid-column:5/13;order:2;}
+.project:nth-child(even) .project-info{grid-column:1/4;order:1;}
 @media (max-width:900px){
   .project-num{grid-column:1/3;}
   .project-img,.project:nth-child(even) .project-img{grid-column:1/13;order:1;aspect-ratio:16/10;}
@@ -197,10 +197,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
   <div class="wrap">
     <div class="meta-strip-inner">
       <div class="meta-strip-item">7+ Years</div>
-      <div class="meta-strip-item">Brand</div>
-      <div class="meta-strip-item">UX</div>
-      <div class="meta-strip-item">Visual Systems</div>
-      <div class="meta-strip-item">Strategy</div>
+      <div class="meta-strip-item">Brand + Product</div>
+      <div class="meta-strip-item">Strategy to Execution</div>
+      <div class="meta-strip-item">Systems Thinking</div>
       <div class="meta-strip-item">Bengaluru</div>
     </div>
   </div>
@@ -309,8 +308,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
 <section id="skills" class="divider">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>Skills</h2>
-      <p>Disciplines across brand, product and cross-functional design leadership.</p>
+      <h2>How I Work</h2>
+      <p>From framing the problem to building the system and aligning the people around it.</p>
     </div>
     <div class="skills-grid reveal">
       <div class="skill-group">
