@@ -15,7 +15,7 @@
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;font-weight:300;overflow-x:hidden}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}::selection{background:var(--accent);color:var(--ink)}
 .wrap{max-width:1320px;margin:auto;padding:0 var(--pad)}.mono,.eyebrow{font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.12em;font-size:11px}.eyebrow{color:var(--dim)}h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.035em;line-height:1.02}p{line-height:1.7;color:var(--dim)}section{padding:clamp(72px,10vw,144px) 0;border-top:1px solid var(--line)}
 header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:"Space Grotesk";font-weight:700}.nav-links{display:flex;gap:28px}.nav-links a{font:11px "IBM Plex Mono";text-transform:uppercase;letter-spacing:.08em}
-.hero{padding:160px 0 72px;border:0}.hero h1{font-size:clamp(52px,8.2vw,118px);text-transform:uppercase;max-width:1150px}.hero h1 span{display:block;color:var(--dim)}.hero-lede{font-size:clamp(18px,2vw,24px);max-width:760px;margin-top:32px}.hero-meta{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.meta{padding:20px 20px 20px 0;border-right:1px solid var(--line)}.meta:last-child{border:0}.meta b{display:block;font:10px "IBM Plex Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}.meta span{font-size:14px}
+.hero{padding:160px 0 72px;border:0}.hero h1{font-size:clamp(52px,8.2vw,118px);text-transform:uppercase;max-width:1150px}.hero h1 span{display:block;color:var(--dim)}.hero-lede{font-size:clamp(18px,2vw,24px);max-width:760px;margin-top:32px}.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.meta{padding:20px 20px 20px 0;border-right:1px solid var(--line)}.meta:last-child{border:0}.meta b{display:block;font:10px "IBM Plex Mono";letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}.meta span{font-size:14px}
 .hero-media{margin-top:56px;aspect-ratio:16/9;background:var(--dark);display:grid;place-items:center;position:relative;overflow:hidden}.hero-media::after{content:"PROJECT DASHBOARD — PRODUCT WALKTHROUGH";font:11px "IBM Plex Mono";letter-spacing:.12em;color:#aaa}.media-note{position:absolute;left:18px;bottom:18px;color:#777;font:10px "IBM Plex Mono";letter-spacing:.1em;text-transform:uppercase}
 .section-kicker{margin-bottom:24px}.display{font-size:clamp(38px,5.6vw,76px);max-width:1050px}.display .muted{color:var(--dim)}.intro{max-width:720px;font-size:17px;margin-top:30px}
 .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border-top:1px solid var(--line)}.summary-card{padding:30px 32px 0 0;border-right:1px solid var(--line);min-height:250px}.summary-card+ .summary-card{padding-left:32px}.summary-card:last-child{border-right:0}.summary-card h3{font-size:22px;margin:16px 0}.summary-card p{font-size:14px}
@@ -26,9 +26,9 @@ header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);
 .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}.principle{border-top:2px solid var(--ink);padding-top:22px}.principle h3{font-size:28px;margin:14px 0}.principle p{font-size:14px}
 .arch{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.arch-card{background:var(--bg2);padding:38px}.arch-card h3{font-size:28px;margin-bottom:28px}.tree{font:12px/2 "IBM Plex Mono";white-space:pre;color:var(--dim)}.logic{display:flex;flex-direction:column;gap:10px}.logic-step{padding:15px;border:1px solid var(--line);background:var(--bg);font:11px "IBM Plex Mono";text-transform:uppercase}.logic-arrow{text-align:center;color:var(--faint)}
 .media-strip{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}.media{aspect-ratio:16/10;background:#171715;display:grid;place-items:center;color:#777;font:10px "IBM Plex Mono";letter-spacing:.1em;text-transform:uppercase;padding:20px;text-align:center}
-.next{background:var(--accent);border:0}.next h2{font-size:clamp(38px,6vw,80px);max-width:1000px}.next p{color:#313329;max-width:620px;margin-top:24px}
+.decision-line{margin-top:72px;border-top:1px solid var(--line);padding-top:28px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px}.decision-line strong{font:500 clamp(24px,3vw,38px)/1.15 "Space Grotesk"}.fragments{display:flex;flex-wrap:wrap;gap:8px;align-content:start}.fragments span,.evolution-mid span{font:10px "IBM Plex Mono";text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--line);padding:10px 12px}.strategy-simple{margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:36px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;font:11px "IBM Plex Mono";letter-spacing:.08em}.strategy-simple strong{font:500 clamp(22px,3vw,38px) "Space Grotesk";letter-spacing:-.03em}.evolution{margin-top:72px;display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:32px;align-items:center}.evolution h3{font-size:30px;margin-top:10px}.evolution-mid{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}.wide{margin-top:64px;aspect-ratio:16/8}.three-questions{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:64px;border:1px solid var(--line)}.three-questions span{background:var(--bg);padding:28px;font:500 20px "Space Grotesk"}.next{background:var(--accent);border:0}.next h2{font-size:clamp(38px,6vw,80px);max-width:1000px}.next p{color:#313329;max-width:620px;margin-top:24px}
 .reveal{opacity:0;transform:translateY(20px);transition:.8s var(--ease)}.reveal.in{opacity:1;transform:none}
-@media(max-width:900px){.hero-meta,.summary-grid,.principles,.arch,.media-strip{grid-template-columns:1fr}.meta,.summary-card,.summary-card+.summary-card{border-right:0;border-bottom:1px solid var(--line);padding:20px 0}.summary-card{min-height:0}.flow-row{grid-template-columns:1fr}.flow-arrow{transform:rotate(90deg)}.gaps{grid-template-columns:1fr 1fr}.gap{border-bottom:1px solid var(--line)}.strategy-map{grid-template-columns:1fr}.connector{padding:14px;transform:rotate(90deg)}}@media(max-width:600px){.nav-links{display:none}.gaps{grid-template-columns:1fr}.gap,.gap+.gap{padding:22px 0;border-right:0}.workflow{padding:24px}.hero{padding-top:125px}.tree{font-size:10px;overflow:auto}}
+@media(max-width:900px){.decision-line,.evolution,.three-questions{grid-template-columns:1fr}.strategy-simple{align-items:flex-start;flex-direction:column}.strategy-simple b{transform:rotate(90deg)}.hero-meta,.summary-grid,.principles,.arch,.media-strip{grid-template-columns:1fr}.meta,.summary-card,.summary-card+.summary-card{border-right:0;border-bottom:1px solid var(--line);padding:20px 0}.summary-card{min-height:0}.flow-row{grid-template-columns:1fr}.flow-arrow{transform:rotate(90deg)}.gaps{grid-template-columns:1fr 1fr}.gap{border-bottom:1px solid var(--line)}.strategy-map{grid-template-columns:1fr}.connector{padding:14px;transform:rotate(90deg)}}@media(max-width:600px){.nav-links{display:none}.gaps{grid-template-columns:1fr}.gap,.gap+.gap{padding:22px 0;border-right:0}.workflow{padding:24px}.hero{padding-top:125px}.tree{font-size:10px;overflow:auto}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
@@ -39,24 +39,13 @@ header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);
 <div class="eyebrow">Internal product concept · Product / UX design · 2026</div>
 <h1>Designing structure <span>into the creative workflow.</span></h1>
 <p class="hero-lede">I designed a workflow system that turns fragmented creative tasks, approvals and handoffs into a structured project lifecycle—from brief to final delivery.</p>
-<div class="hero-meta">
-<div class="meta"><b>Role</b><span>Product / UX Designer</span></div>
-<div class="meta"><b>Ownership</b><span>End-to-end product design</span></div>
-<div class="meta"><b>Validation</b><span>6–8 designers & senior designers</span></div>
-<div class="meta"><b>Status</b><span>Functional prototype · Internally evaluated</span></div>
-</div>
-<div class="hero-media"><span class="media-note">Media slot · GIF 01</span></div>
+<div class="hero-meta"><div class="meta"><b>Role</b><span>Product / UX Designer</span></div><div class="meta"><b>Scope</b><span>Strategy · UX · Interaction · UI</span></div><div class="meta"><b>Status</b><span>Functional prototype · Internally evaluated</span></div></div>\n<div class="hero-media"><span class="media-note">Media slot · GIF 01</span></div>
 </div></section>
 
 <section><div class="wrap reveal">
 <div class="eyebrow section-kicker">Overview</div>
 <h2 class="display">Jira managed the tasks. <span class="muted">The creative process between them was still fragmented.</span></h2>
-<div class="summary-grid">
-<article class="summary-card"><span class="num">01 / Challenge</span><h3>The workflow lived outside the tickets.</h3><p>Smaller checkpoints, stakeholder approvals, ownership and stage progression often existed across conversations, email, meetings and project files.</p></article>
-<article class="summary-card"><span class="num">02 / Opportunity</span><h3>Make the workflow itself visible.</h3><p>I explored a structured system connecting stages, tasks, ownership, time, evidence and approvals—without trying to replace the team's existing project-management tools.</p></article>
-<article class="summary-card"><span class="num">03 / Outcome</span><h3>From one branding flow to a configurable system.</h3><p>Across 18 iterations, the concept evolved into reusable stage templates. The functional prototype was tested with designers and reviewed with Design leadership and Operations.</p></article>
-</div>
-</div></section>
+<div class="summary-grid"><article class="summary-card"><span class="num">Challenge</span><h3>The workflow lived outside the tickets.</h3><p>Approvals, checkpoints and project progression were spread across conversations, email, meetings and files.</p></article><article class="summary-card"><span class="num">Shift</span><h3>Make the workflow itself visible.</h3><p>The opportunity was not another task manager, but a layer connecting the decisions around the work.</p></article><article class="summary-card"><span class="num">Direction</span><h3>A configurable workflow system.</h3><p>Across 18 iterations, a branding-specific flow evolved into reusable stages and approval logic.</p></article></div>\n</div></section>
 
 <section><div class="wrap reveal">
 <div class="eyebrow section-kicker">01 / Problem</div>
@@ -66,14 +55,7 @@ header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);
 <div class="flow-row"><div class="flow-node">Brief</div><div class="flow-arrow">→</div><div class="flow-node">Jira tasks</div><div class="flow-arrow">→</div><div class="flow-node">Design</div><div class="flow-arrow">→</div><div class="flow-node">Delivery</div></div>
 <div class="side-signals"><span class="signal">Email approval?</span><span class="signal">Client feedback</span><span class="signal">Figma comments</span><span class="signal">Can refinement begin?</span><span class="signal">Where is the approved file?</span></div>
 </div>
-<div class="gaps">
-<article class="gap"><span class="num">01</span><h3>Stage visibility</h3><p>Individual tasks were visible; the overall state of the project was less explicit.</p></article>
-<article class="gap"><span class="num">02</span><h3>Approval traceability</h3><p>Decisions across email and meetings were difficult to trace inside the workflow.</p></article>
-<article class="gap"><span class="num">03</span><h3>Premature progression</h3><p>Refinement could begin before the concept direction had been explicitly approved.</p></article>
-<article class="gap"><span class="num">04</span><h3>Missing checkpoints</h3><p>A deliverable ticket did not always represent the smaller steps needed to complete it systematically.</p></article>
-<article class="gap"><span class="num">05</span><h3>Effort visibility</h3><p>With multiple designers, understanding ownership and invested effort required extra coordination.</p></article>
-</div>
-</div></section>
+<div class="decision-line"><strong>Completing the work and progressing the project were two different things.</strong><div class="fragments"><span>Unclear stage</span><span>Untracked approval</span><span>Fragmented ownership</span></div></div>\n</div></section>
 
 <section class="insight"><div class="wrap reveal">
 <div class="eyebrow">Problem reframed</div>
@@ -85,14 +67,7 @@ header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);
 <div class="eyebrow section-kicker">02 / Product strategy</div>
 <h2 class="display">Don't replace Jira. <span class="muted">Design the layer around it.</span></h2>
 <p class="intro">I deliberately positioned the concept as a workflow layer rather than another general project-management product. The central question became: <strong>what needs to be true before this project should move forward?</strong></p>
-<div class="strategy-map">
-<div class="strategy-box"><span class="num">Existing ecosystem</span><h3>Jira</h3><p>Broader project management remains where it already works.</p><ul><li>Tickets</li><li>Backlog</li><li>Delivery coordination</li></ul></div>
-<div class="connector">→</div>
-<div class="strategy-box focus"><span class="num">Designed layer</span><h3>Workflow system</h3><p>The process logic around completing and approving creative work.</p><ul><li>Stages & checkpoints</li><li>Ownership & time</li><li>Evidence & approvals</li></ul></div>
-<div class="connector">→</div>
-<div class="strategy-box"><span class="num">Resulting state</span><h3>Project progression</h3><p>A visible, evidence-backed path from brief to final delivery.</p></div>
-</div>
-</div></section>
+<div class="strategy-simple"><span>JIRA / TASKS</span><b>→</b><strong>WORKFLOW LAYER</strong><b>→</b><span>PROJECT PROGRESSION</span></div>\n</div></section>
 
 <section><div class="wrap reveal">
 <div class="eyebrow section-kicker">03 / Design principles</div>
@@ -108,33 +83,15 @@ header{position:fixed;z-index:50;inset:0 0 auto;background:rgba(246,243,236,.9);
 <div class="eyebrow section-kicker">04 / System architecture</div>
 <h2 class="display">From a branding SOP <span class="muted">to a configurable workflow model.</span></h2>
 <p class="intro">The first concept followed the branding process I already used. Through iteration, I separated the underlying workflow mechanics from the content of any one discipline—making stages reusable and editable for different teams.</p>
-<div class="arch">
-<div class="arch-card"><h3>Product model</h3><div class="tree">ORGANIZATION
-│
-├── STAGE TEMPLATES
-│
-└── PROJECTS
-    │
-    ├── STAGE 01
-    │   ├── Tasks
-    │   ├── Assignees
-    │   ├── Time
-    │   ├── Due dates
-    │   └── Approval
-    │
-    ├── STAGE 02  🔒
-    ├── STAGE 03  🔒
-    └── STAGE 04  🔒</div></div>
-<div class="arch-card"><h3>Progression logic</h3><div class="logic"><div class="logic-step">Project</div><div class="logic-arrow">↓</div><div class="logic-step">Stage</div><div class="logic-arrow">↓</div><div class="logic-step">Tasks</div><div class="logic-arrow">↓</div><div class="logic-step">Checkpoint</div><div class="logic-arrow">↓</div><div class="logic-step">Approval + evidence</div><div class="logic-arrow">↓</div><div class="logic-step">Unlock next stage</div></div></div>
-</div>
-<div class="media-strip"><div class="media">Media slot · Stage template configuration · GIF 02</div><div class="media">Media slot · Project creation / stage selection · GIF 03</div></div>
+<div class="evolution"><div><span class="num">V01</span><h3>Branding workflow</h3></div><div class="evolution-mid"><span>Stage gates</span><span>Flexible task behaviour</span><span>Editable workflow templates</span></div><div><span class="num">V18</span><h3>Configurable workflow framework</h3></div></div>\n<div class="media-strip"><div class="media">Media slot · Stage template configuration · GIF 02</div><div class="media">Media slot · Project creation / stage selection · GIF 03</div></div>
 </div></section>
 
-<section class="next"><div class="wrap reveal">
-<div class="eyebrow">Next chapter</div>
-<h2>Designing the rules that make the workflow work.</h2>
-<p>Next: stage-gated progression, flexible task movement, accountability, project overview hierarchy, validation and the evolution from V1 to V18.</p>
-</div></section>
+<section><div class="wrap reveal"><div class="eyebrow section-kicker">05 / Approval-gated progression</div><h2 class="display">Progress happens when <span class="muted">the right things are approved.</span></h2><p class="intro">A stage does not unlock because its tickets look finished. The next stage becomes available after the relevant work, evidence and stakeholder decision are explicit.</p><div class="media wide">Product evidence · approval state → next stage unlock</div></div></section>
+<section><div class="wrap reveal"><div class="eyebrow section-kicker">06 / Structured, not rigid</div><h2 class="display">The system needed rules. <span class="muted">Real projects needed exceptions.</span></h2><p class="intro">When work is skipped or emerges later, it can move into a later stage instead of disappearing or forcing the project into an artificial sequence.</p><div class="media wide">Product evidence · moving an incomplete task between stages</div></div></section>
+<section><div class="wrap reveal"><div class="eyebrow section-kicker">07 / Accountability</div><h2 class="display">Visibility into effort, <span class="muted">without turning time into surveillance.</span></h2><p class="intro">Ownership, due dates and logged time sit in the context of the work. The goal is to understand where project effort is going—especially when several designers contribute—not to turn hours into a standalone performance score.</p><div class="media wide">Product evidence · task ownership / time / due date</div></div></section>
+<section><div class="wrap reveal"><div class="eyebrow section-kicker">08 / Project overview</div><h2 class="display">One view should answer <span class="muted">three questions.</span></h2><div class="three-questions"><span>Where are we?</span><span>What needs attention?</span><span>What prevents us moving forward?</span></div><div class="media wide">Product evidence · project dashboard</div></div></section>
+<section><div class="wrap reveal"><div class="eyebrow section-kicker">09 / Validation</div><h2 class="display">Testing the workflow, <span class="muted">not just the interface.</span></h2><p class="intro">I tested the functional prototype informally with approximately 6–8 designers and senior designers. Early friction around time tracking and skipped tasks exposed where the model was too idealized, so I refined how incomplete work could progress. The evolved prototype was later reviewed with Design leadership and Operations, who identified potential for broader internal use.</p></div></section>
+<section class="insight"><div class="wrap reveal"><div class="eyebrow">Reflection</div><h2>I started by organizing branding tasks. I ended up designing how a team’s working process could become visible without becoming inflexible.</h2><p>The biggest lesson was not about adding more project-management features. It was learning where structure creates clarity—and where flexibility needs to remain with the team.</p></div></section>
 </main>
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
