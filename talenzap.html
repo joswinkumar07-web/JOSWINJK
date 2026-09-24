@@ -104,6 +104,11 @@
 
   .cs-section .eyebrow{margin-bottom:18px}.cs-section h2{max-width:900px}.cs-image{margin-top:clamp(28px,4vw,56px)}.cs-image-row{margin-top:clamp(28px,4vw,56px)}
 .evidence-grid{grid-template-columns:1.35fr .85fr .85fr;align-items:stretch}.evidence-grid img{width:100%;height:100%;object-fit:cover}.evidence-wide{grid-template-columns:1.35fr .65fr}.evidence-wide img{width:100%;height:100%;object-fit:cover}@media(max-width:720px){.evidence-grid,.evidence-wide{grid-template-columns:1fr}.evidence-grid img,.evidence-wide img{height:auto}}
+
+.motion-reveal{opacity:0;transform:translateY(28px);transition:opacity .75s var(--ease),transform .75s var(--ease)}.motion-reveal.in{opacity:1;transform:none}
+.cs-image,.cs-image-row img,.cs-hero-img{transition:transform .7s var(--ease)}.cs-image-row{overflow:hidden}
+@media(hover:hover) and (pointer:fine){.cs-image:hover,.cs-image-row img:hover{transform:scale(1.012)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-reveal,.cs-image,.cs-image-row img,.cs-hero-img{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 </head>
 <body>
@@ -234,5 +239,15 @@
 
 
 
+<script>
+(function(){
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const els=[...document.querySelectorAll('.cs-section .wrap, .cs-footer .wrap')];
+ if(reduced){els.forEach(el=>el.classList.add('in'));document.querySelectorAll('video[autoplay]').forEach(v=>{v.pause();v.removeAttribute('autoplay')});return}
+ els.forEach(el=>el.classList.add('motion-reveal'));
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(el=>io.observe(el));
+})();
+</script>
 </body>
 </html>
