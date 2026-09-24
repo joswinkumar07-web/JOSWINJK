@@ -167,7 +167,7 @@
 <section class="cs-section">
   <div class="wrap">
     <div class="eyebrow">The Challenge</div>
-    <h2>Pivot to Talenzap: Overcoming Domain Constraints &amp; Rebuilding Identity</h2>
+    <h2>Rebuilding the Brand When the Name Changed</h2>
     <p class="lead">When domain availability constraints prevented the reservation of the original brand name "Arenastars," the team executed a strategic pivot to "Talenzap." Beyond a simple name change, the challenge required designing an adaptable visual system that could seamlessly transition across mobile UI, interactive digital touchpoints, high-contrast dark modes, and physical brand collateral under a bold new unified tagline.</p>
     <div class="pull-quote">&ldquo;Your Stage to Win.&rdquo;</div>
 
@@ -213,19 +213,6 @@
   </div>
 </section>
 
-<div class="gate-wrap" id="gateWrap">
-  <div class="gate-fade"></div>
-  <div class="gate-prompt" id="gatePrompt">
-    <div class="lock-icon">&#128274;</div>
-    <h3>Continue reading</h3>
-    <p>Enter the PIN shared with you to view the Implementation &amp; Results section.</p>
-    <div class="pin-input-row">
-      <input type="text" inputmode="text" maxlength="20" class="pin-input" id="pinInput" placeholder="PIN" autocomplete="off">
-      <button class="pin-submit" id="pinSubmit">View</button>
-    </div>
-    <div class="pin-error" id="pinError">Incorrect PIN, try again.</div>
-  </div>
-
 <!-- Section 4: Implementation & Real-World Application -->
 <section class="cs-section">
   <div class="wrap">
@@ -239,13 +226,13 @@
       <li><b>Component Refinement:</b> Implemented high-contrast CTA states, interactive buttons, and responsive cards utilizing the refreshed Talenzap palette for maximum visual clarity on mobile interfaces.</li>
     </ul>
     <div class="cs-image-row cols-3">
-      <img data-src="talenzap_user1.jpg" width="1600" height="900" alt="Talenzap user module dark mode screens">
-      <img data-src="talenzap_user2.jpg" width="1600" height="900" alt="Talenzap user module phone mockup on staircase">
-      <img data-src="talenzap_user3.jpg" width="1600" height="900" alt="Talenzap user module phone mockups">
+      <img src="talenzap_user1.jpg" width="1600" height="900" alt="Talenzap user module dark mode screens">
+      <img src="talenzap_user2.jpg" width="1600" height="900" alt="Talenzap user module phone mockup on staircase">
+      <img src="talenzap_user3.jpg" width="1600" height="900" alt="Talenzap user module phone mockups">
     </div>
     <div class="cs-image-row" style="margin-top:20px;">
-      <img data-src="talenzap_user4.jpg" width="1600" height="900" alt="Talenzap user module light mode home screens">
-      <img data-src="talenzap_user5.jpg" width="1600" height="900" alt="Talenzap user module mobile mockup">
+      <img src="talenzap_user4.jpg" width="1600" height="900" alt="Talenzap user module light mode home screens">
+      <img src="talenzap_user5.jpg" width="1600" height="900" alt="Talenzap user module mobile mockup">
     </div>
 
     <h3 class="sub-head">Behind the Dashboard</h3>
@@ -254,8 +241,8 @@
       <li><b>System Consistency:</b> Enforced precise spacing, grid alignments, and component states across dense admin tables and action screens to streamline backend workflows for platform operators.</li>
     </ul>
     <div class="cs-image-row">
-      <img data-src="talenzap_admin1.jpg" width="1600" height="900" alt="Talenzap admin dashboard competitions view">
-      <img data-src="talenzap_admin2.jpg" width="1600" height="900" alt="Talenzap admin dashboard winner details view">
+      <img src="talenzap_admin1.jpg" width="1600" height="900" alt="Talenzap admin dashboard competitions view">
+      <img src="talenzap_admin2.jpg" width="1600" height="900" alt="Talenzap admin dashboard winner details view">
     </div>
 
     <h3 class="sub-head">Taking It Off-Screen</h3>
@@ -263,7 +250,7 @@
       <li><b>Spatial &amp; Merchandise Presence:</b> Applied the updated emblem and typographic rules across physical collateral, apparel, and signage mockups.</li>
       <li><b>Brand Integrity Standards:</b> Defined explicit "Logo Don'ts", minimum clearance boundaries, and color usage guidelines to maintain visual consistency across all third-party integrations and physical touchpoints.</li>
     </ul>
-    <img class="cs-image" data-src="talenzap_physical.jpg" width="1600" height="1200" alt="Talenzap stage signage mockup">
+    <img class="cs-image" src="talenzap_physical.jpg" width="1600" height="1200" alt="Talenzap stage signage mockup">
     <div class="img-caption">Physical brand application, event stage signage</div>
   </div>
 </section>
@@ -277,42 +264,7 @@
   </div>
 </footer>
 
-</div>
 
-<script>
-  const CORRECT_PIN = 'View@2026!';
-  const gateWrap = document.getElementById('gateWrap');
-  const gatePrompt = document.getElementById('gatePrompt');
-  const pinInput = document.getElementById('pinInput');
-  const pinSubmit = document.getElementById('pinSubmit');
-  const pinError = document.getElementById('pinError');
-
-  function unlockGate(){
-    gateWrap.querySelectorAll('[data-src]').forEach(el=>{
-      el.src = el.dataset.src;
-      el.removeAttribute('data-src');
-    });
-    gateWrap.classList.add('unlocked');
-  }
-
-  function tryUnlock(){
-    if (pinInput.value.trim() === CORRECT_PIN) {
-      sessionStorage.setItem('jk_unlocked', 'true');
-      unlockGate();
-    } else {
-      pinError.classList.add('show');
-      gatePrompt.classList.remove('shake'); void gatePrompt.offsetWidth; gatePrompt.classList.add('shake');
-      pinInput.value = '';
-      pinInput.focus();
-    }
-  }
-  pinSubmit.addEventListener('click', tryUnlock);
-  pinInput.addEventListener('keydown', e=>{ if(e.key === 'Enter') tryUnlock(); });
-
-  if (sessionStorage.getItem('jk_unlocked') === 'true') {
-    unlockGate();
-  }
-</script>
 
 </body>
 </html>
