@@ -176,13 +176,16 @@
       --fs:clamp(64px,22vw,190px);
       width:auto; height:auto; margin:0; padding-inline:var(--pad); font-size:var(--fs);
     }
-    .hero-title .w{position:absolute; top:.06em;}
-    .hero-title .w1{left:var(--pad); right:auto;}
-    .hero-title .w2{left:var(--pad); top:.98em;}
-    .hero-stage::before{content:""; display:block; height:.78em;}   /* room for “About” above the head */
+    /* A framed portrait makes the source image's shoulder edges intentional. */
+    .hero-title{margin-bottom:24px;}
+    .hero-title .w{position:static; display:block; white-space:normal;}
+    .hero-title .w + .w{margin-top:.08em;}
+    .hero-stage::before{display:none;}
     .hero-portrait{
-      position:relative; left:auto; bottom:auto; transform:none; height:auto;
-      width:min(80vw,540px); margin-left:auto; margin-right:calc(var(--pad) * -.2);
+      position:relative; left:auto; bottom:auto; transform:none;
+      width:100%; max-width:440px; height:auto; object-fit:contain;
+      margin:0 auto 24px; background:var(--bg-deep);
+      border:1px solid var(--line-soft); border-radius:12px;
     }
     @keyframes rise{from{opacity:0; transform:translateY(36px);} to{opacity:1; transform:none;}}
     .hero-id{position:static; width:auto; min-width:0; max-width:none; margin:0 calc(var(--pad) * -1); padding:22px var(--pad) 26px; border-top:1px solid var(--line);}
