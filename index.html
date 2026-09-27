@@ -9,6 +9,7 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://portfolio-joswin-jk.vercel.app/">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://portfolio-joswin-jk.vercel.app/">
 <meta property="og:title" content="Joswin Kumar, Senior Brand & UX Designer">
 <meta property="og:description" content="Senior Brand & UX Designer working across brand strategy, identity systems, product thinking and digital experiences.">
 <meta property="og:image" content="https://portfolio-joswin-jk.vercel.app/forte_poster.jpg">
@@ -43,6 +44,8 @@ section{padding:clamp(88px,9vw,136px) 0;}
 @media (max-width:720px){ section{padding:56px 0;} }
 .divider{border-top:1px solid var(--line);}
 
+.skip{position:absolute;left:22px;top:-80px;z-index:200;background:#f4f2ed;color:#111;padding:12px 16px;font:500 12px 'IBM Plex Mono',monospace;text-transform:uppercase}
+.skip:focus{top:16px}
 /* ---------- nav ---------- */
 header{position:absolute;top:0;left:0;right:0;z-index:100;background:transparent;border:0;color:#F4F2ED;}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:34px 48px;}
@@ -54,7 +57,16 @@ nav.links{display:flex;gap:44px;font-family:'IBM Plex Mono',monospace;font-size:
 nav.links a{position:relative;padding-bottom:3px;}
 nav.links a::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:#F4F2ED;transition:width .3s var(--ease);}
 @media (hover:hover) and (pointer:fine){nav.links a:hover::after{width:100%;}}
-@media (max-width:640px){nav.links{display:none;}}
+ .mobile-menu{display:none;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.mobile-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu summary span{font-size:17px;line-height:1}
+.mobile-menu nav{position:absolute;right:22px;top:100%;width:min(300px,calc(100vw - 44px));display:flex;flex-direction:column;background:var(--bg);color:var(--ink);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.22);padding:8px;letter-spacing:.06em}
+.mobile-menu nav a{padding:14px 16px;min-height:44px;border-bottom:1px solid var(--line)}
+.mobile-menu nav a:last-child{border-bottom:0}
+header .logo:focus-visible,header .mobile-menu summary:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.mobile-menu nav a:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+@media (max-width:640px){nav.links{display:none;}.mobile-menu{display:block;}}
 
 /* ---------- hero ---------- */
 .hero{min-height:100vh;padding:0;background:#0b0c0c;color:#f4f2ed;position:relative;overflow:hidden;display:flex;align-items:center;}
@@ -183,20 +195,22 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header>
   <div class="nav-inner">
-    <div class="logo">JOSWIN KUMAR <span>&mdash; BENGALURU</span></div>
-    <nav class="links">
+    <a class="logo" href="index.html" aria-label="Joswin Kumar, home">JOSWIN KUMAR <span>&mdash; BENGALURU</span></a>
+    <nav class="links" aria-label="Primary">
       <a href="#work">Work</a>
       <a href="about.html">About</a>
       <a href="resume.pdf" download>R&eacute;sum&eacute;</a>
       <a href="#contact">Contact</a>
     </nav>
+    <details class="mobile-menu"><summary aria-label="Toggle navigation" aria-controls="mobile-primary">Menu <span aria-hidden="true">☰</span></summary><nav id="mobile-primary" aria-label="Mobile primary"><a href="#work">Work</a><a href="about.html">About</a><a href="resume.pdf">Résumé</a><a href="#contact">Contact</a></nav></details>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -381,6 +395,7 @@ if(!reduced){
 }else{
   document.querySelectorAll('video[autoplay]').forEach(v=>{v.pause();v.removeAttribute('autoplay')});
 }
+document.querySelectorAll('.mobile-menu').forEach(menu=>{menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false}));menu.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.open=false;menu.querySelector('summary').focus()}})});
 </script>
 
 </body>
