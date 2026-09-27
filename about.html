@@ -116,6 +116,14 @@
   .nav a:hover::before,.nav a:focus-visible::before{transform:scaleX(1);}
   .nav a[aria-current="page"]{color:var(--ink); font-weight:500;}
   .nav a[aria-current="page"]::before{transform:scaleX(1);}
+  .mobile-menu{display:none;}
+  .mobile-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px;font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;}
+  .mobile-menu summary::-webkit-details-marker{display:none;}
+  .mobile-menu summary span{font-size:17px;}
+  .mobile-menu nav{position:absolute;right:var(--pad);top:100%;width:min(300px,calc(100vw - 44px));display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--line);box-shadow:0 18px 40px rgba(0,0,0,.14);padding:8px;}
+  .mobile-menu nav a{padding:12px 16px;min-height:44px;font:400 13px var(--sans);border-bottom:1px solid var(--line);}
+  .mobile-menu nav a:last-child{border-bottom:0;}
+  @media(max-width:640px){.site-header>.nav{display:none;}.mobile-menu{display:block;}}
   .nav a[aria-current="page"]::after{ /* selected-state red dot */
     content:""; position:absolute; left:50%; bottom:-4px; width:5px; height:5px; margin-left:-2.5px; border-radius:50%; background:var(--accent);
   }
@@ -424,7 +432,9 @@
     <a href="index.html#work">Work</a>
     <a href="about.html" aria-current="page">About</a>
     <a href="index.html#contact">Contact</a>
+    <a href="resume.pdf">Résumé</a>
   </nav>
+  <details class="mobile-menu"><summary aria-label="Toggle navigation" aria-controls="mobile-primary">Menu <span aria-hidden="true">☰</span></summary><nav id="mobile-primary" aria-label="Mobile primary"><a href="index.html#work">Work</a><a href="about.html" aria-current="page">About</a><a href="resume.pdf">Résumé</a><a href="index.html#contact">Contact</a></nav></details>
 </header>
 
 <main id="main">
@@ -683,6 +693,7 @@
     });
   },{threshold:.12, rootMargin:'0px 0px -5% 0px'});
   els.forEach(function(e){ io.observe(e); });
+  document.querySelectorAll('.mobile-menu').forEach(menu=>{menu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false}));menu.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.open=false;menu.querySelector('summary').focus()}})});
 })();
 </script>
 </body>
